@@ -1,5 +1,9 @@
 2016-11-09  Patrick Eriksson  <patrick.eriksson@chalmers.se>
 
+	* Removed some files that should not be in the repository (*.m~).
+
+2016-11-09  Patrick Eriksson  <patrick.eriksson@chalmers.se>
+
 	* Just a start. Most files should be in place. But not much
-	editing yet. 
+	editing yet.
 
