@@ -1,0 +1,49 @@
+O3:
+-----
+Line centre and strength replaced with JPL: 
+501.22 GHz, df +0.66 MHz (JPL higher), dI +12.9% (JPL higher, but no T-correction)
+501.48 GHz, df -1.50 MHz, dI +2.4% 
+544.49 GHz, df +0.15 MHz, dI +6.0%
+544.86 GHz, df -0.32 MHz, dI -0.4%
+550.99 GHz, df +0.91 MHz, dI +0.0%
+551.44 GHz, df +0.49 MHz, dI +2.8%
+576.52 GHz, df -1.01 MHz, dI +0.5%
+
+(Broadening of 544.86 GHz so far left untouched)
+
+
+H2O:
+-----
+Line centre and strength replaced with JPL: 
+488.49 GHz, df +0.21 MHz, dI -0.6%
+489.05 GHz  df + 5kHz,    dI -2.9%
+490.60 GHz, df +0.01 MHz, dI -3.1% 
+547.68 GHz, df +0.11 MHz, dI -2.6%
+552.02 GHz, df -0.05 MHz, dI -2.6%
+556.94 GHz, df -3 kHz,    dI -3.1%
+
+For pressure broadening, see h2o_notes.txt
+
+
+N2O:
+-----
+Line centre and strength replaced with JPL: 
+502.30 GHz, df +2.25 MHz, dI -8.0% 
+
+
+CO:
+-----
+Line centre and strength replaced with JPL: 
+576.3 GHz, df -2 kHz, dI -2.6% 
+
+
+NO:
+-----
+Line centre and strength replaced with JPL: 
+551.19 GHz, df -0.26 MHz, dI -3.6% (just main three lines modified)
+551.53 GHz, same as 551.19
+
+
+ClO:
+-----
+501.27 GHz: Line positions and strengths look to agree well between JPL and HITRAN

@@ -1,0 +1,12 @@
+#
+# This scripts extract a part of HITRAN 2012 and stores it into hitran_data_part.orig
+#
+Arts2{
+
+abs_linesReadFromHitran( abs_lines, 
+                         "/home/patrick/Data/HITRAN_2012/HITRAN2012.par", 
+                         200e9, 1000e9 )
+
+WriteXML( "ascii", abs_lines, "hitran_data_part.orig" )
+
+}
