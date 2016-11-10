@@ -43,10 +43,6 @@ Qsmr: definition of settings
    
 ~~~~~
 
-ABSLOOKUP_OPTION
-   A string. This string gives the name of the sub-folder containing the
-   absorption look-up table to use.
-
 ABS_P_INTERP_ORDER
    An integer. The polynomial order to apply for pressure interpolation of the
    absorption look-up table. See further the ARTS workspace variable with the
@@ -316,6 +312,15 @@ TB_SCALING_FAC
    factor. If this factor is denoted as c, the scaling is Tb_new = c * Tb.
    For example setting this field to 1.005 will convert an original  Tb-value 
    of 200 K to 201 K. To leave the data unchanged, set this field to [] or 1. 
+
+VERSION_ARTS
+   A string. This string shall match the version string provided by the
+   expected version of ARTS. For example: 'arts-2.3.562'
+
+VERSION_QSMR
+   A string. This string shall match the version string found at the top of
+   Qsmr's ChangeLOg file. The version is expcted to be placed on line 3 and be
+   proceeded with a '*'.  
 
 ZTAN_LIMIT_BOT
    A vector of length 4. The lower limit for tangent altitudes to include in

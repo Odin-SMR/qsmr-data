@@ -1,4 +1,19 @@
-function Q = q_meso(freqmode, invemode)
+% Q_MESO   Settings for mesospheric inversion mode
+%
+%   This function contains the settings used for operational "mesospheric"
+%   inversions. That is, don't modify without careful consideration.
+%
+%   The Q-fields are set according to selected frequency mode. The returned
+%   Q is complete besides that all fields related to paths. These fields
+%   should be set by *q_paths*.
+%
+% FORMAT   Q = q_meso(freqmode)
+%
+% OUT   Q          A Q-structure (lacking path and version settings) 
+%  IN   freqmode   Frequency mode number
+
+
+function Q = q_meso(freqmode)
 
 
 %---------------------------------------------------------------------------
@@ -10,32 +25,9 @@ Q.INVEMODE           = 'meso';
 
 
 %---------------------------------------------------------------------------
-%--- Work and data folders
-%---------------------------------------------------------------------------
-
-Q.FOLDER_WORK        = '/tmp';
-
-if exist('/myhome')
-  datadir              = '/QsmrData';
-else
-  datadir              = '~/Data/QsmrData';
-end
-Q.FOLDER_ABSLOOKUP   = fullfile( datadir, 'AbsLookup', Q.INVEMODE );
-Q.FOLDER_BDX         = fullfile( datadir, 'SpeciesApriori', 'Bdx' );  
-Q.FOLDER_FGRID       = fullfile( datadir, 'Fgrid', Q.INVEMODE );
-Q.FOLDER_MSIS90      = fullfile( datadir, 'TemperatureApriori', 'MSIS90' );  
-
-topfolder            = q2_topfolder;
-Q.FOLDER_ANTENNA     = fullfile( topfolder, 'DataFiles', 'Antenna' );  
-Q.FOLDER_BACKEND     = fullfile( topfolder, 'DataFiles', 'Backend' );  
-
-
-%---------------------------------------------------------------------------
 %--- Absorption tables
 %---------------------------------------------------------------------------
 
-%Q.ABSLOOKUP_OPTION   = [];
-Q.ABSLOOKUP_OPTION   = '200mK_linear';
 Q.F_GRID_NFILL       = 0;
 Q.ABS_P_INTERP_ORDER = 1;
 Q.ABS_T_INTERP_ORDER = 3;
@@ -63,9 +55,8 @@ Q.TB_CONTRAST_FAC    = [];
 %--- OEM settings
 %---------------------------------------------------------------------------
 
-Q.STOP_DX            = 0.2;
-%Q.GA_START           = 10;
-Q.GA_START           = 1;
+Q.STOP_DX            = 0.5;
+Q.GA_START           = 10;
 Q.GA_FACTOR_NOT_OK   = 10;
 Q.GA_FACTOR_OK       = 10;
 Q.GA_MAX             = 1e4;

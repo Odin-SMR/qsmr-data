@@ -33,24 +33,21 @@
 %    The set of test simulations are mainly defined by P. Some details, such
 %    as orbit altitude, are hard-coded.
 %
-%    Call the function as with O set to o_std(q2_fmodes) to perform
-%    pre-calculations for all frequency modes defined.
-%
 %    Final files are stored in a subfolder of Q.FOLDER_FGRID
 %
-% FORMAT   q2_precalc_fgrid(QQ,P,workfolder,precs)
+% FORMAT   q2_precalc_fgrid(QQ,P,workfolder[,precs)
 %        
-% IN    QQ       An array of Q structures
-%       P        A P structure
+% IN    QQ           An array of Q structures
+%       P            A P structure
 %       workfolder   Folder to use for running ARTS.
-%       precs    Vector of precision limits [K]. 
-% OPT   do_cubic Flag to active cubic interpolation. Default is false.
+% OPT   precs        Vector of precision limits [K]. Default is 200 mK.
+%       do_cubic     Flag to active cubic interpolation. Default is false.
 
 % 2015-05-25   Created by Patrick Eriksson.
 
-function q2_precalc_fgrid(QQ,P,workfolder,precs,varargin)
+function q2_precalc_fgrid(QQ,P,workfolder,varargin)
 %
-[do_cubic] = optargs( varargin, { false } );
+[precs,do_cubic] = optargs( varargin, { 0.2, false } );
 
 
 %- Check folder and file names
@@ -69,6 +66,7 @@ for i = 1 : length( QQ )
     
   end
 end
+
 
 
 %- Loop all fmodes
@@ -258,8 +256,9 @@ function [outfolder,outfile] = create_folderfile( Q, precs, do_cubic );
     lorc = 'linear';
   end
     
-  outfolder = fullfile( Q.FOLDER_FGRID, sprintf( '%dmK_%s', precs*1e3, lorc ) );
+  outfolder = Q.FOLDER_FGRID;
 
-  outfile = fullfile( outfolder, sprintf( 'fgrid_fmode%02d.xml', Q.FREQMODE ) );
+  outfile = fullfile( outfolder, sprintf( 'fgrid_fmode%02d_%03dmK_%s.xml', ...
+                                          Q.FREQMODE, precs*1e3, lorc ) );
 return
 %--------------------------------------------------------------------------

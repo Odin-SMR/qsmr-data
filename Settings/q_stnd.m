@@ -1,9 +1,19 @@
-function Q = q_std(freqmode,invemode)
+% Q_STND   Settings for standard inversion mode
 %
-if nargin < 2, invemode = 'stnd'; end
+%   This function contains the settings used for operational "standard"
+%   inversions. That is, don't modify without careful consideration.
 %
-assert( length(freqmode) == 1 );
+%   The Q-fields are set according to selected frequency mode. The returned
+%   Q is complete besides that all fields related to paths. These fields
+%   should be set by *q_paths*.
+%
+% FORMAT   Q = q_stnd(freqmode)
+%
+% OUT   Q          A Q-structure (lacking path and version settings) 
+%  IN   freqmode   Frequency mode number
 
+
+function Q = q_stnd(freqmode)
 
 
 %---------------------------------------------------------------------------
@@ -11,34 +21,13 @@ assert( length(freqmode) == 1 );
 %---------------------------------------------------------------------------
 
 Q.FREQMODE           = freqmode;  
-Q.INVEMODE           = invemode;
-
-
-%---------------------------------------------------------------------------
-%--- Different paths
-%---------------------------------------------------------------------------
-
-Q.ARTS               = 'arts';
-Q.FOLDER_WORK        = '/tmp';
-
-datadir            = '~/Data/QsmrData';
-Q.FOLDER_ABSLOOKUP   = fullfile( datadir, 'AbsLookup', Q.INVEMODE );  
-Q.FOLDER_BDX         = fullfile( datadir, 'SpeciesApriori', 'Bdx' );  
-Q.FOLDER_FGRID       = fullfile( datadir, 'Fgrid', Q.INVEMODE );  
-Q.FOLDER_MSIS90      = fullfile( datadir, 'TemperatureApriori', 'MSIS90' );  
-
-topfolder            = q2_topfolder;
-Q.FOLDER_ANTENNA     = fullfile( topfolder, 'DataFiles', 'Antenna' );  
-Q.FOLDER_BACKEND     = fullfile( topfolder, 'DataFiles', 'Backend' );  
-
+Q.INVEMODE           = 'stnd';
 
 
 %---------------------------------------------------------------------------
 %--- Absorption tables
 %---------------------------------------------------------------------------
 
-%Q.ABSLOOKUP_OPTION   = [];
-Q.ABSLOOKUP_OPTION   = '100mK_linear';
 Q.F_GRID_NFILL       = 0;
 Q.ABS_P_INTERP_ORDER = 1;
 Q.ABS_T_INTERP_ORDER = 3;
@@ -67,7 +56,7 @@ Q.TB_CONTRAST_FAC    = [];
 %---------------------------------------------------------------------------
 
 Q.STOP_DX            = 0.5;
-Q.GA_START           = 1;
+Q.GA_START           = 10;
 Q.GA_FACTOR_NOT_OK   = 10;
 Q.GA_FACTOR_OK       = 10;
 Q.GA_MAX             = 1e4;
@@ -123,10 +112,6 @@ Q.MIN_N_FREQS        = 100;
 switch freqmode
   
  case 1
-  %
-  if ~( strcmp( invemode, 'stnd' )  )
-    error( 'Inversion modes of freqmode %d are: ''stnd''.', freqmode ); 
-  end
   %
   Q.P_GRID                  = q2_pgrid( [], 70e3 ); 
   %
@@ -277,10 +262,6 @@ switch freqmode
 
   
  case 21
-  %
-  if ~( strcmp( invemode, 'stnd' ) )
-    error( 'Inversion modes of freqmode %d is: ''stnd''.', freqmode ); 
-  end
   %
   Q.STOP_DX                  = 1;
   Q.GA_START                 = 100;

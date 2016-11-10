@@ -41,20 +41,20 @@ np = 41;
 
 %- Output format
 %
-pgrid    = q2_pgrid( [], [], true );
+pgrid          = q2_pgrid;
 %
-Bdx           = atmdata_empty( 4 );
+Bdx            = atmdata_empty( 4 );
 %  
-Bdx.SOURCE    = 'Qsmr Bordeaux a priori database';
+Bdx.SOURCE     = 'Qsmr Bordeaux a priori database';
 %
-Bdx.DATA_NAME = 'Volume mixing ratio';
-Bdx.DATA_UNIT = '1';
+Bdx.DATA_NAME  = 'Volume mixing ratio';
+Bdx.DATA_UNIT  = '1';
 %
-Bdx.GRID1     = pgrid;
-Bdx.GRID2     = latitudes;
-Bdx.GRID3     = NaN;
+Bdx.GRID1      = pgrid;
+Bdx.GRID2      = latitudes;
+Bdx.GRID3      = NaN;
 %
-dm           = daysinmonth( 2001, 1:12 );
+dm             = daysinmonth( 2001, 1:12 );
 Bdx.GRID4      = [0 round(dm/2)+cumsum([0 dm(1:end-1)]) 367]';
 Bdx.GRID4_NAME = 'DOY';
 Bdx.GRID4_UNIT = 'DOY';

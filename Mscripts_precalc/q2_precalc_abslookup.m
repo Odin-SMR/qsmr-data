@@ -9,14 +9,14 @@
 % IN    QQ      An array of Q structures
 %       P       A P structure
 %       workfolder   Folder to use for running ARTS.
-%       precs   A vector of precision limits.
-% OPT   do_cubic Flag to use f_grid assuming cubic interpolation. Default is false.
+% OPT   precs        Vector of precision limits [K]. Default is 200 mK.
+%       do_cubic Flag to use f_grid assuming cubic interpolation. Default is false.
 
 % 2015-05-25   Created by Patrick Eriksson.
 
-function q2_precalc_abslookup(QQ,P,workfolder,precs,varargin)
+function q2_precalc_abslookup(QQ,P,workfolder,varargin)
 %
-[do_cubic] = optargs( varargin, { false } );
+[precs,do_cubic] = optargs( varargin, { 0.2, false } );
 
 
 %- Check folder and file names
@@ -83,15 +83,14 @@ function A = do_1fmode( Q, P, workfolder, prec, do_cubic )
   C.SPECIES       = arts_tgs_cnvrt( Q.ABS_SPECIES );
   C.R_EARTH       = earth_radius;
 
-  if do_cubic
-    lorc = 'cubic';
-  else
-    lorc = 'linear';
+  fgridfile = whichfiles( sprintf( 'fgrid_fmode%02d*.xml', Q.FREQMODE ), ...
+                          Q.FOLDER_FGRID );
+  if length(fgridfile) == 0
+    error( 'No fgrid-file was found for fmode %d.', Q.FREQMODE );
+  elseif length(fgridfile) > 1
+    error( 'Multiple fgrid-file were found for fmode %d.', Q.FREQMODE );
   end
-  %    
-  fgridfile = fullfile( Q.FOLDER_FGRID, sprintf( '%dmK_%s', prec*1e3, lorc ), ...
-                        sprintf( 'fgrid_fmode%02d.xml', Q.FREQMODE ) );
-  f_grid    = xmlLoad( fgridfile );
+  f_grid    = xmlLoad( fgridfile{1} );
   %
   xmlStore( fullfile( workfolder, 'f_grid.xml' ), f_grid, ...
                                                         'Vector', 'binary' );
@@ -117,13 +116,7 @@ return
   
 function [outfolder,outfile] = create_folderfile( Q, precs, do_cubic );
 
-  outfolder = fullfile( Q.FOLDER_ABSLOOKUP, sprintf( '%dmK', precs*1e3) );
-
-  if do_cubic
-    outfolder = [ outfolder, '_cubic' ];
-  else
-    outfolder = [ outfolder, '_linear' ];
-  end
+  outfolder = Q.FOLDER_ABSLOOKUP;
 
   outfile = fullfile( outfolder, sprintf( 'abslookup_fmode%02d.xml', ...
                                                             Q.FREQMODE ) );
