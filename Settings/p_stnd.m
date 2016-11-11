@@ -5,7 +5,7 @@
 %
 % FORMAT P = p_std
 
-function P = p_std
+function P = p_stnd
 
   
 %-------------------------------------------------------------------------------
@@ -72,6 +72,9 @@ inputfolder     = fullfile( q2data_topfolder, 'DataInput', 'Absorption' );
 
 % File holding description of absorption continua and models
 P.CONTINUA_FILE = fullfile( inputfolder, 'continua_std.arts' );
+
+% File holding partition functions
+P.PARTITION_FILE = fullfile( inputfolder, 'tips.xml' );
 
 % File holding all spectroscopy data
 P.SPECTRO_FILE  = fullfile( inputfolder, 'smr_linedata.xml' );

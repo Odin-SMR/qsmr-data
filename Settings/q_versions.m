@@ -10,4 +10,4 @@ function Q = q_versions(Q)
 
 Q.VERSION_ARTS = 'arts-2.3.562';
 
-Q.VERSION_QSMR = 'qsmr-beta-1';
+Q.VERSION_QSMR = 'qsmr-beta-2';

@@ -74,14 +74,15 @@ function A = do_1fmode( Q, P, workfolder, prec, do_cubic )
                       P.REFSPECTRA_LON(1), P.REFSPECTRA_MJD(1) );
   ATM =  q2_get_atm( LOG, Q );
 
-  C.ABSORPTION    = 'CalcTable';
-  C.CONTINUA_FILE = P.CONTINUA_FILE;
-  C.SPECTRO_FILE  = P.SPECTRO_FILE;
-  C.SPECTRO_FMIN  = 0;
-  C.SPECTRO_FMAX  = 2e12;
-  C.REFRACTION_DO = false;
-  C.SPECIES       = arts_tgs_cnvrt( Q.ABS_SPECIES );
-  C.R_EARTH       = earth_radius;
+  C.ABSORPTION     = 'CalcTable';
+  C.PARTITION_FILE = P.PARTITION_FILE;
+  C.CONTINUA_FILE  = P.CONTINUA_FILE;
+  C.SPECTRO_FILE   = P.SPECTRO_FILE;
+  C.SPECTRO_FMIN   = 0;
+  C.SPECTRO_FMAX   = 2e12;
+  C.REFRACTION_DO  = false;
+  C.SPECIES        = arts_tgs_cnvrt( Q.ABS_SPECIES );
+  C.R_EARTH        = earth_radius;
 
   fgridfile = whichfiles( sprintf( 'fgrid_fmode%02d*.xml', Q.FREQMODE ), ...
                           Q.FOLDER_FGRID );

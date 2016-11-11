@@ -143,6 +143,7 @@ function f_opt = do_1range( Q, P, workfolder, frange, precs, do_cubic );
   % Create cfile and needed variables
   %
   C.ABSORPTION      = 'OnTheFly';
+  C.PARTITION_FILE  = P.PARTITION_FILE;
   C.CONTINUA_FILE   = P.CONTINUA_FILE;
   C.SPECTRO_FILE    = P.SPECTRO_FILE;
   C.SPECTRO_FMIN    = min(frange) - L.F_EXTRA;

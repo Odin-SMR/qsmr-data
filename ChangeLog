@@ -1,3 +1,10 @@
+2016-11-11  Patrick Eriksson  <patrick.eriksson@chalmers.se>
+
+	* DataInput/Absorption/tips.xml: New data file.
+
+	* Settings/p_stnd.m:
+	* Mscripts_precalc/q2_precalc_abslookup: Introduced P.PARTITION_FILE. 
+
 2016-11-10  Patrick Eriksson  <patrick.eriksson@chalmers.se>
 
 	* A first version that can be used for practical retrievals.
