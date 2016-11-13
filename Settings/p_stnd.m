@@ -57,7 +57,7 @@ P.REFSPECTRA_ZTAN   = 15e3 : 5e3 : 90e3;
 %-------------------------------------------------------------------------------
 
 % Frequency spacing of reference spectra
-P.FGRID_TEST_DF     = 500e3;
+P.FGRID_TEST_DF     = 100e3;
 
 % How much frequency margin to add, to both primary and image band
 P.FGRID_EDGE_MARGIN = 20e6;

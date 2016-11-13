@@ -9,7 +9,8 @@ Line centre and strength replaced with JPL:
 551.44 GHz, df +0.49 MHz, dI +2.8%
 576.52 GHz, df -1.01 MHz, dI +0.5%
 
-(Broadening of 544.86 GHz so far left untouched)
+Change of air broadening:
+544.86 GHz: 24942 -> 30500 (based on tests made by Ashley)
 
 
 H2O:

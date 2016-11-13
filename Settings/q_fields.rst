@@ -295,7 +295,9 @@ T
    Retrieval grid to use for temperature. UNC: A vector of length 5, with a 
    priori uncertainty (1 std dev)  at 100, 10, 1, 0.1 and 0.01 hPa (roughly 
    16, 32, 48, 64 and 80 km). CORRLEN: Correlation length, in meter, to use 
-   when creating Sx.
+   when creating Sx. LIMITS: A vector of length 2, specifying allowed limits
+   for retrieved temperatures. The first and second value is the lower and
+   upper limit, respectively. 
 
 TB_CONTRAST_FAC
    A scalar value. This factor modifies the contrast of each spectrum part. 

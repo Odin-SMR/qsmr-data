@@ -1,9 +1,21 @@
+2016-11-13  Patrick Eriksson  <patrick.eriksson@chalmers.se>
+
+	* Mscripts_precalc/test1species.m: Also image band can now be simulated.
+
+	* Settings/q_meso.m: Added fmode 21 (Joonas) and fmode 13 (Donal).
+	Added also fmode 19, by largely copy fmode 13.
+
+	* Settings/q_stnd.m: Added fmode 2, based on input from Ashley.
+
+	* DataInput/Absorption/smr_linedata.xml: Changed air braodening
+	for ozone@544.857GHz to 30500.
+
 2016-11-11  Patrick Eriksson  <patrick.eriksson@chalmers.se>
 
 	* DataInput/Absorption/tips.xml: New data file.
 
 	* Settings/p_stnd.m:
-	* Mscripts_precalc/q2_precalc_abslookup: Introduced P.PARTITION_FILE. 
+	* Mscripts_precalc/q2_precalc_abslookup: Introduced P.PARTITION_FILE.
 
 2016-11-10  Patrick Eriksson  <patrick.eriksson@chalmers.se>
 
