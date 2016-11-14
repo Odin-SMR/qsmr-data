@@ -81,6 +81,3 @@ P.SPECTRO_FILE  = fullfile( inputfolder, 'smr_linedata.xml' );
 
 % The set of temperature perturbations
 P.ABS_T_PERT    = symgrid( [0:10:100 120 150] )';
-
-
-

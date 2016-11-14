@@ -1,5 +1,18 @@
 2016-11-13  Patrick Eriksson  <patrick.eriksson@chalmers.se>
 
+	* Testing and fine-tuning of fmode 1 and 2.
+
+	* Settings/q_stnd.m: T.LIMITS added. Refraction was set to false!
+	Modified setting for fmode 2, most importantly extended list of
+	species.
+
+	* Settings/q_versions.m: New Qsmr version.
+
+	* Settings/q_fields.rst: ABS_SPECIES.ISOFAC lacked description.
+	Introduced Q.T.LIMITS and Q.T.L2NAME.
+
+2016-11-13  Patrick Eriksson  <patrick.eriksson@chalmers.se>
+
 	* Mscripts_precalc/test1species.m: Also image band can now be simulated.
 
 	* Settings/q_meso.m: Added fmode 21 (Joonas) and fmode 13 (Donal).

@@ -120,7 +120,7 @@ switch freqmode
   Q.F_LO_NOMINAL             = 553.300e9;
   Q.SIDEBAND_LEAKAGE         = 0.02; 
   %
-  Q.P_GRID                   = q2_pgrid( [], 150e3 ); 
+  Q.P_GRID                   = q2_pgrid( [], 125e3 ); 
   %
   Q.F_RANGES                 = [ 556.6e9 557.2e9; ];
   Q.ZTAN_LIMIT_TOP           = 150e3;
@@ -128,14 +128,15 @@ switch freqmode
   Q.ZTAN_MIN_RANGE           = [ 45e3 80e3 ];
   %
   Q.T.L2                     = true;
-  Q.T.GRID                   = q2_pgrid( 40e3, 150e3, 4 );
+  Q.T.L2NAME                 = 'Temperature / 557 (Fmode 13) / ? to ? km';
+  Q.T.GRID                   = q2_pgrid( 40e3, 120e3, 4 );
   Q.T.SOURCE                 = 'WebApi';
   %
   Q.ABS_SPECIES(1).TAG{1}    = 'H2O-*-556e9-557e9';
   Q.ABS_SPECIES(1).RETRIEVE  = true;
   Q.ABS_SPECIES(1).L2        = true;
-  Q.ABS_SPECIES(1).L2NAME    = 'H2O / 556 GHz / 45 to 115 km';
-  Q.ABS_SPECIES(1).GRID      = q2_pgrid( 40e3, 150e3, 4 );
+  Q.ABS_SPECIES(1).L2NAME    = 'H2O / 557 GHz / 45 to 115 km';
+  Q.ABS_SPECIES(1).GRID      = q2_pgrid( 40e3, 120e3, 4 );
   Q.ABS_SPECIES(1).UNC_REL   = 0.5;
   Q.ABS_SPECIES(1).UNC_ABS   = 1e-6;
   Q.ABS_SPECIES(1).CORRLEN   = 10e3;
@@ -144,7 +145,7 @@ switch freqmode
   Q.ABS_SPECIES(2).TAG{1}    = 'O3-*-556e9-557e9';
   Q.ABS_SPECIES(2).RETRIEVE  = true;
   Q.ABS_SPECIES(2).L2        = true;
-  Q.ABS_SPECIES(2).GRID      = q2_pgrid( 40e3, 110e3, 4 );
+  Q.ABS_SPECIES(2).GRID      = q2_pgrid( 40e3, 120e3, 4 );
   Q.ABS_SPECIES(2).L2NAME    = 'O3 / 557 GHz / 45 to 95 km';
   Q.ABS_SPECIES(2).UNC_REL   = 0.5;
   Q.ABS_SPECIES(2).UNC_ABS   = 1e-6;
@@ -161,9 +162,9 @@ switch freqmode
   Q.BACKEND_NR               = 1;
   Q.FRONTEND_NR              = 4;
   Q.F_LO_NOMINAL             = 553.05e9;
-  Q.SIDEBAND_LEAKAGE         = 0.02; 
+  Q.SIDEBAND_LEAKAGE         = 0.05; 
   %
-  Q.P_GRID                   = q2_pgrid( [], 150e3 ); 
+  Q.P_GRID                   = q2_pgrid( [], 125e3 ); 
   %
   Q.F_RANGES                 = [ 556.6e9 557.2e9; ];
   Q.ZTAN_LIMIT_TOP           = 150e3;
@@ -171,14 +172,15 @@ switch freqmode
   Q.ZTAN_MIN_RANGE           = [ 45e3 80e3 ];
   %
   Q.T.L2                     = true;
-  Q.T.GRID                   = q2_pgrid( 40e3, 150e3, 4 );
+  Q.T.L2NAME                 = 'Temperature / 557 (Fmode 19) / ? to ? km';
+  Q.T.GRID                   = q2_pgrid( 40e3, 125e3, 4 );
   Q.T.SOURCE                 = 'WebApi';
   %
   Q.ABS_SPECIES(1).TAG{1}    = 'H2O-*-556e9-557e9';
   Q.ABS_SPECIES(1).RETRIEVE  = true;
   Q.ABS_SPECIES(1).L2        = true;
-  Q.ABS_SPECIES(1).L2NAME    = 'H2O / 556 GHz / 45 to 115 km';
-  Q.ABS_SPECIES(1).GRID      = q2_pgrid( 40e3, 150e3, 4 );
+  Q.ABS_SPECIES(1).L2NAME    = 'H2O / 557 GHz / 45 to 115 km';
+  Q.ABS_SPECIES(1).GRID      = q2_pgrid( 40e3, 125e3, 4 );
   Q.ABS_SPECIES(1).UNC_REL   = 0.5;
   Q.ABS_SPECIES(1).UNC_ABS   = 1e-6;
   Q.ABS_SPECIES(1).CORRLEN   = 10e3;
@@ -187,7 +189,7 @@ switch freqmode
   Q.ABS_SPECIES(2).TAG{1}    = 'O3-*-556e9-557e9';
   Q.ABS_SPECIES(2).RETRIEVE  = true;
   Q.ABS_SPECIES(2).L2        = true;
-  Q.ABS_SPECIES(2).GRID      = q2_pgrid( 40e3, 110e3, 4 );
+  Q.ABS_SPECIES(2).GRID      = q2_pgrid( 40e3, 125e3, 4 );
   Q.ABS_SPECIES(2).L2NAME    = 'O3 / 557 GHz / 45 to 95 km';
   Q.ABS_SPECIES(2).UNC_REL   = 0.5;
   Q.ABS_SPECIES(2).UNC_ABS   = 1e-6;
@@ -204,7 +206,7 @@ switch freqmode
   Q.BACKEND_NR               = 1;
   Q.FRONTEND_NR              = 4;
   Q.F_LO_NOMINAL             = 547.753e9;
-  Q.SIDEBAND_LEAKAGE         = 0.02;
+  Q.SIDEBAND_LEAKAGE         = 0.05;
   %
   Q.P_GRID                   = q2_pgrid( [], 150e3 ); 
   %
@@ -214,6 +216,7 @@ switch freqmode
   Q.ZTAN_MIN_RANGE           = [ 45e3 80e3 ];
   %
   Q.T.L2                     = true;
+  Q.T.L2NAME                 = 'Temperature / 551 GHz / ? to ? km';
   Q.T.GRID                   = q2_pgrid( 40e3, 150e3, 4 );
   Q.T.SOURCE                 = 'WebApi';
   %

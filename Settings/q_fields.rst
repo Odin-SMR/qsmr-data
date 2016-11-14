@@ -61,7 +61,10 @@ ABS_SPECIES
    and relative values are compared using the a priori profile and the largest
    of the two is selected (but not exceeding 1e3 in relative value). CORRLEN:
    Correlation length, in meter, to use when creating Sx. LOG_ON: Set to true
-   to impose a positive constrain for the species.
+   to impose a positive constrain for the species. L2NAME: A string. The name
+   to give the retrieved product. ISOFAC: A scalar. The isotopologue fraction
+   assumed in ARTS. If the complete species VMR is the
+   output, this field shall be set to 1.
 
    Note that when creating L2 data the outermost points of GRID are removed. 
 
@@ -297,7 +300,7 @@ T
    16, 32, 48, 64 and 80 km). CORRLEN: Correlation length, in meter, to use 
    when creating Sx. LIMITS: A vector of length 2, specifying allowed limits
    for retrieved temperatures. The first and second value is the lower and
-   upper limit, respectively. 
+   upper limit, respectively. L2NAME: A string. Will be used as L2.Product.
 
 TB_CONTRAST_FAC
    A scalar value. This factor modifies the contrast of each spectrum part. 
