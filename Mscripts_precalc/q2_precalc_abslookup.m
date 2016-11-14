@@ -97,8 +97,12 @@ function A = do_1fmode( Q, P, workfolder, prec, do_cubic )
                                                         'Vector', 'binary' );
   xmlStore( fullfile( workfolder, 'p_grid.xml' ), Q.P_GRID, ...
                                                         'Vector', 'binary' );
+  % We set an upper limit on abs_t! This helps to handle the thermosphere.
+  tlim   = 300;
+  t_grid = ATM.T;
+  t_grid(find(t_grid>tlim)) = tlim;
   %
-  xmlStore( fullfile( workfolder, 'abs_t.xml' ), ATM.T, ...
+  xmlStore( fullfile( workfolder, 'abs_t.xml' ), t_grid, ...
                                                          'Vector', 'binary' );
   xmlStore( fullfile( workfolder, 'abs_t_pert.xml' ), P.ABS_T_PERT, ...
                                                          'Vector', 'binary' );

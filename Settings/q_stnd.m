@@ -74,7 +74,7 @@ Q.BASELINE.RETRIEVE  = true;
 Q.BASELINE.MODEL     = 'adaptive';  % 'common', 'module', 'adaptive'
 Q.BASELINE.UNC       = 2;
 
-Q.POINTING.RETRIEVE  = false;
+Q.POINTING.RETRIEVE  = true;
 Q.POINTING.UNC       = 0.01;
 
 Q.FREQUENCY.RETRIEVE = true;

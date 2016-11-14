@@ -172,7 +172,7 @@ switch freqmode
   Q.ZTAN_MIN_RANGE           = [ 45e3 80e3 ];
   %
   Q.T.L2                     = true;
-  Q.T.L2NAME                 = 'Temperature / 557 (Fmode 19) / ? to ? km';
+  Q.T.L2NAME                 = 'Temperature / 557 (Fmode 19) / 45 to 95 km';
   Q.T.GRID                   = q2_pgrid( 40e3, 125e3, 4 );
   Q.T.SOURCE                 = 'WebApi';
   %
@@ -190,7 +190,7 @@ switch freqmode
   Q.ABS_SPECIES(2).RETRIEVE  = true;
   Q.ABS_SPECIES(2).L2        = true;
   Q.ABS_SPECIES(2).GRID      = q2_pgrid( 40e3, 125e3, 4 );
-  Q.ABS_SPECIES(2).L2NAME    = 'O3 / 557 GHz / 45 to 95 km';
+  Q.ABS_SPECIES(2).L2NAME    = 'O3 / 557 GHz / 45 to 90 km';
   Q.ABS_SPECIES(2).UNC_REL   = 0.5;
   Q.ABS_SPECIES(2).UNC_ABS   = 1e-6;
   Q.ABS_SPECIES(2).CORRLEN   = 10e3;
@@ -216,7 +216,8 @@ switch freqmode
   Q.ZTAN_MIN_RANGE           = [ 45e3 80e3 ];
   %
   Q.T.L2                     = true;
-  Q.T.L2NAME                 = 'Temperature / 551 GHz / ? to ? km';
+  Q.T.LIMITS                 = [100 1000];
+  Q.T.L2NAME                 = 'Temperature / 551 GHz / 45 to 65 km';
   Q.T.GRID                   = q2_pgrid( 40e3, 150e3, 4 );
   Q.T.SOURCE                 = 'WebApi';
   %

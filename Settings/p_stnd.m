@@ -80,4 +80,9 @@ P.PARTITION_FILE = fullfile( inputfolder, 'tips.xml' );
 P.SPECTRO_FILE  = fullfile( inputfolder, 'smr_linedata.xml' );
 
 % The set of temperature perturbations
-P.ABS_T_PERT    = symgrid( [0:10:100 120 150] )';
+%
+% The mimimum value of the lookup table reference temperature is about 180
+% K, and the reference temperature is not allowed to go above 300 K. You 
+% should adopt ABS_T_PERT accordingly.
+%
+P.ABS_T_PERT    = [ symgrid( [0:10:100 120 160] ), 220 300 400 600 900 ]';

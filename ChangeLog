@@ -1,5 +1,22 @@
 2016-11-14  Patrick Eriksson  <patrick.eriksson@chalmers.se>
 
+	* Settings/q_meso.m: Polishing of settings. Q.SIDEBAND_LEAKAGE now
+	set to 0.05 for fmode 19 and 21 (both using front-end 4), to be
+	consistent with fmode 2.
+
+	* Mscripts_precalc/q2_precalc_abslookup.m: An upper limit on abs_t
+	is now applied. The limit is hard-coded in the function is now set
+	to 400 K.
+
+	* Settings/q_versions.m (q_versions): New qsmr version.
+
+	* Settings/p_stnd.m (p_stnd): Changed P.ABS_T_PERT to adopt to
+	change in q2_precalc_abslookup, and to better handle the thermpsphere.
+
+	* Settings/q_stnd.m: Changed back to have Q.POINTING.RETRIEVE = true;
+
+2016-11-14  Patrick Eriksson  <patrick.eriksson@chalmers.se>
+
 	* Settings/q_versions.m: Switched to presently last arts version.
 	Let's use this version (2.3.564) from now on.
 
