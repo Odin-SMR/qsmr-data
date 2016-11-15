@@ -1,3 +1,11 @@
+2016-11-15  Patrick Eriksson  <patrick.eriksson@chalmers.se>
+
+	* Settings/q_paths.m: Q.FOLDER_BDX now also set.
+
+	* DataPrecalced/SpeciesApriori: Bdx mat files now found here.
+
+	* Settings/q_versions.m: VERSION_QSMR = 'qsmr-beta-5';
+
 2016-11-14  Patrick Eriksson  <patrick.eriksson@chalmers.se>
 
 	* Settings/q_meso.m: Polishing of settings. Q.SIDEBAND_LEAKAGE now
