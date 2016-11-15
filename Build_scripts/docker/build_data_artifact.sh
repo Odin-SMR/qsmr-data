@@ -1,0 +1,28 @@
+#!/bin/bash
+
+set -e
+
+build_data_artifact() {
+    local output_path=$1
+    local invemode=$2
+    local freqmode=$3
+    local abslookup_path
+    local invemode_dir
+
+    invemode=$(echo "$invemode" | awk '{print tolower($0)}')
+    # First letter should be uppercase in directory name
+    invemode_dir=$(echo ${invemode:0:1} | awk '{print toupper($0)}')${invemode:1}
+
+    # Copy static data needed by qsmr
+    cp -r /QsmrData/DataPrecalced $output_path
+    mkdir -p "${output_path}/DataInput"
+    cp -r /QsmrData/DataInput/Temperature "${output_path}/DataInput"
+    abslookup_path="${output_path}/AbsLookup/${invemode_dir}"
+    mkdir -p $abslookup_path
+
+    # Calculate abslookup data and save Q config
+    # The Q config will contain version information for qsmr and arts
+    /qsmr_precalc/run_runprecalc.sh "/opt/matlab/v90" $output_path $invemode $freqmode
+}
+
+build_data_artifact "$@"
