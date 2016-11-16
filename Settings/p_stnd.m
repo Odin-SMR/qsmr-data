@@ -3,9 +3,17 @@
 %    Note that the pre-calculations use settings in both P and Q. See
 %    comments (and code) in the pre-calculation functions.
 %
-% FORMAT P = p_std
+% FORMAT P = p_std( [meso] )
+%
+% OUT  P     Pre-calculation settings
+% OPT  meso  Boolean to select settings dedicated for mesopsheric
+%            retrievals. Default is false.
 
-function P = p_stnd
+function P = p_stnd( meso )
+%
+if nargin == 0
+  meso = false;
+end
 
   
 %-------------------------------------------------------------------------------
@@ -49,7 +57,11 @@ P.REFSPECTRA_LON    = repmat( 0, size(P.REFSPECTRA_LAT) );
 P.REFSPECTRA_MJD    = repmat( date2mjd(2000,1,1)+34, size(P.REFSPECTRA_LAT) );
 
 % A set of tangent altitudes, considered when generating frequency grids.
-P.REFSPECTRA_ZTAN   = 15e3 : 5e3 : 90e3; 
+if ~meso
+  P.REFSPECTRA_ZTAN   = 15e3 : 5e3 : 90e3; 
+else
+  P.REFSPECTRA_ZTAN   = 45e3 : 5e3 : 105e3;     
+end
 
 
 %-------------------------------------------------------------------------------

@@ -1,4 +1,14 @@
-2016-11-16  Julia Ringsby 
+2016-11-16  Patrick Eriksson  <patrick.eriksson@chalmers.se>
+
+	* Frequency grids for fmode 14, 21, 22 and 24 (re-)generated. Did
+	a few test inversions for fmode 14.
+
+	* Settings/p_stnd.m: Introduced an optional argument to select
+	specific mesospheric settings.
+
+	* Settings/q_meso.m: Just fixed indentation.
+
+2016-11-16  Julia Ringsby
 
 	* Settings/q_meso.m: Added fmode 14, 22 and 24.
 

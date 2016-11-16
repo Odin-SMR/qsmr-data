@@ -160,48 +160,48 @@ switch freqmode
   %-------------------------------------------------------------------------
   
  case 14
-    %
-    Q.BACKEND_NR               = 2;
-    Q.FRONTEND_NR              = 3;
-    Q.F_LO_NOMINAL             = 572.762e9;
-    Q.SIDEBAND_LEAKAGE         = 0.05;
-    %
-    Q.GA_START                 = 100;
-    %
-    Q.P_GRID                   = q2_pgrid( [], 150e3 );
-    %
-    Q.F_RANGES                 = [ 576.2e9 576.6e9 ];
-    Q.ZTAN_LIMIT_TOP           = 150e3;
-    Q.ZTAN_LIMIT_BOT           = [ 40e3 40e3 40e3 40e3 ];
-    Q.ZTAN_MIN_RANGE           = [ 60e3 80e3 ];
-    %
-    Q.T.L2                     = true;
-    Q.T.L2NAME                 = 'Temperature / 576 GHz';
-    Q.T.GRID                   = q2_pgrid( 40e3, 150e3, 4 );
-    %
-    Q.ABS_SPECIES(1).TAG{1}    = 'CO-*-575e9-578e9';
-    Q.ABS_SPECIES(1).RETRIEVE  = true;
-    Q.ABS_SPECIES(1).L2        = true;
-    Q.ABS_SPECIES(1).GRID      = q2_pgrid( 40e3, 150e3, 4 );
-    Q.ABS_SPECIES(1).L2NAME    = 'CO / 576 GHz';
-    Q.ABS_SPECIES(1).UNC_REL   = 1;
-    Q.ABS_SPECIES(1).UNC_ABS   = 1e-8;
-    Q.ABS_SPECIES(1).CORRLEN   = 8e3;
-    Q.ABS_SPECIES(1).LOG_ON    = true;
-    %
-    Q.ABS_SPECIES(2).TAG{1}    = 'O3-*-575e9-578e9';
-    Q.ABS_SPECIES(2).RETRIEVE  = true;
-    Q.ABS_SPECIES(2).L2        = true;
-    Q.ABS_SPECIES(2).GRID      = q2_pgrid( 40e3, 110e3, 4 );
-    Q.ABS_SPECIES(2).L2NAME    = 'O3 / 576 GHz';
-    Q.ABS_SPECIES(2).UNC_REL   = 0.5;
-    Q.ABS_SPECIES(2).UNC_ABS   = 1e-6;
-    Q.ABS_SPECIES(2).CORRLEN   = 10e3;
-    Q.ABS_SPECIES(2).LOG_ON    = false;
-    %
-    [Q.ABS_SPECIES.ISOFAC]     = deal( 1 );
-    [Q.ABS_SPECIES.SOURCE]     = deal( 'Bdx' );
-    %-------------------------------------------------------------------------
+  %
+  Q.BACKEND_NR               = 2;
+  Q.FRONTEND_NR              = 3;
+  Q.F_LO_NOMINAL             = 572.762e9;
+  Q.SIDEBAND_LEAKAGE         = 0.05;
+  %
+  Q.GA_START                 = 100;
+  %
+  Q.P_GRID                   = q2_pgrid( [], 150e3 );
+  %
+  Q.F_RANGES                 = [ 576.2e9 576.6e9 ];
+  Q.ZTAN_LIMIT_TOP           = 150e3;
+  Q.ZTAN_LIMIT_BOT           = [ 40e3 40e3 40e3 40e3 ];
+  Q.ZTAN_MIN_RANGE           = [ 60e3 80e3 ];
+  %
+  Q.T.L2                     = true;
+  Q.T.L2NAME                 = 'Temperature / 576 GHz';
+  Q.T.GRID                   = q2_pgrid( 40e3, 150e3, 4 );
+  %
+  Q.ABS_SPECIES(1).TAG{1}    = 'CO-*-575e9-578e9';
+  Q.ABS_SPECIES(1).RETRIEVE  = true;
+  Q.ABS_SPECIES(1).L2        = true;
+  Q.ABS_SPECIES(1).GRID      = q2_pgrid( 40e3, 150e3, 4 );
+  Q.ABS_SPECIES(1).L2NAME    = 'CO / 576 GHz';
+  Q.ABS_SPECIES(1).UNC_REL   = 1;
+  Q.ABS_SPECIES(1).UNC_ABS   = 1e-8;
+  Q.ABS_SPECIES(1).CORRLEN   = 8e3;
+  Q.ABS_SPECIES(1).LOG_ON    = true;
+  %
+  Q.ABS_SPECIES(2).TAG{1}    = 'O3-*-575e9-578e9';
+  Q.ABS_SPECIES(2).RETRIEVE  = true;
+  Q.ABS_SPECIES(2).L2        = true;
+  Q.ABS_SPECIES(2).GRID      = q2_pgrid( 40e3, 110e3, 4 );
+  Q.ABS_SPECIES(2).L2NAME    = 'O3 / 576 GHz';
+  Q.ABS_SPECIES(2).UNC_REL   = 0.5;
+  Q.ABS_SPECIES(2).UNC_ABS   = 1e-6;
+  Q.ABS_SPECIES(2).CORRLEN   = 10e3;
+  Q.ABS_SPECIES(2).LOG_ON    = false;
+  %
+  [Q.ABS_SPECIES.ISOFAC]     = deal( 1 );
+  [Q.ABS_SPECIES.SOURCE]     = deal( 'Bdx' );
+  %-------------------------------------------------------------------------
 
 
  case 19
@@ -294,91 +294,91 @@ switch freqmode
   %-------------------------------------------------------------------------
   
  case 22
-        %
-        Q.BACKEND_NR               = 2;
-        Q.FRONTEND_NR              = 3;
-        Q.F_LO_NOMINAL             = 572.964e9;
-        Q.SIDEBAND_LEAKAGE         = 0.05;
-        %
-        Q.GA_START                 = 100;
-        %
-        Q.P_GRID                   = q2_pgrid( [], 150e3 );
-        %
-        Q.F_RANGES                 = [ 576.2e9 576.6e9 ];
-        Q.ZTAN_LIMIT_TOP           = 150e3;
-        Q.ZTAN_LIMIT_BOT           = [ 40e3 40e3 40e3 40e3 ];
-        Q.ZTAN_MIN_RANGE           = [ 45e3 80e3 ];
-        %
-        Q.T.L2                     = true;
-        Q.T.L2NAME                 = 'Temperature / 576 GHz';
-        Q.T.GRID                   = q2_pgrid( 40e3, 150e3, 4 );
-        %
-        Q.ABS_SPECIES(1).TAG{1}    = 'CO-*-575e9-578e9';
-        Q.ABS_SPECIES(1).RETRIEVE  = true;
-        Q.ABS_SPECIES(1).L2        = true;
-        Q.ABS_SPECIES(1).GRID      = q2_pgrid( 40e3, 150e3, 4 );
-        Q.ABS_SPECIES(1).L2NAME    = 'CO / 576 GHz';
-        Q.ABS_SPECIES(1).UNC_REL   = 1;
-        Q.ABS_SPECIES(1).UNC_ABS   = 1e-8;
-        Q.ABS_SPECIES(1).CORRLEN   = 8e3;
-        Q.ABS_SPECIES(1).LOG_ON    = true;
-        %
-        Q.ABS_SPECIES(2).TAG{1}    = 'O3-*-575e9-578e9';
-        Q.ABS_SPECIES(2).RETRIEVE  = true;
-        Q.ABS_SPECIES(2).L2        = true;
-        Q.ABS_SPECIES(2).GRID      = q2_pgrid( 40e3, 110e3, 4 );
-        Q.ABS_SPECIES(2).L2NAME    = 'O3 / 576 GHz';
-        Q.ABS_SPECIES(2).UNC_REL   = 0.5;
-        Q.ABS_SPECIES(2).UNC_ABS   = 1e-6;
-        Q.ABS_SPECIES(2).CORRLEN   = 10e3;
-        Q.ABS_SPECIES(2).LOG_ON    = false;
-        %
-        [Q.ABS_SPECIES.ISOFAC]     = deal( 1 );
-        [Q.ABS_SPECIES.SOURCE]     = deal( 'Bdx' );
-        %-------------------------------------------------------------------------
+  %
+  Q.BACKEND_NR               = 2;
+  Q.FRONTEND_NR              = 3;
+  Q.F_LO_NOMINAL             = 572.964e9;
+  Q.SIDEBAND_LEAKAGE         = 0.05;
+  %
+  Q.GA_START                 = 100;
+  %
+  Q.P_GRID                   = q2_pgrid( [], 150e3 );
+  %
+  Q.F_RANGES                 = [ 576.2e9 576.6e9 ];
+  Q.ZTAN_LIMIT_TOP           = 150e3;
+  Q.ZTAN_LIMIT_BOT           = [ 40e3 40e3 40e3 40e3 ];
+  Q.ZTAN_MIN_RANGE           = [ 45e3 80e3 ];
+  %
+  Q.T.L2                     = true;
+  Q.T.L2NAME                 = 'Temperature / 576 GHz';
+  Q.T.GRID                   = q2_pgrid( 40e3, 150e3, 4 );
+  %
+  Q.ABS_SPECIES(1).TAG{1}    = 'CO-*-575e9-578e9';
+  Q.ABS_SPECIES(1).RETRIEVE  = true;
+  Q.ABS_SPECIES(1).L2        = true;
+  Q.ABS_SPECIES(1).GRID      = q2_pgrid( 40e3, 150e3, 4 );
+  Q.ABS_SPECIES(1).L2NAME    = 'CO / 576 GHz';
+  Q.ABS_SPECIES(1).UNC_REL   = 1;
+  Q.ABS_SPECIES(1).UNC_ABS   = 1e-8;
+  Q.ABS_SPECIES(1).CORRLEN   = 8e3;
+  Q.ABS_SPECIES(1).LOG_ON    = true;
+  %
+  Q.ABS_SPECIES(2).TAG{1}    = 'O3-*-575e9-578e9';
+  Q.ABS_SPECIES(2).RETRIEVE  = true;
+  Q.ABS_SPECIES(2).L2        = true;
+  Q.ABS_SPECIES(2).GRID      = q2_pgrid( 40e3, 110e3, 4 );
+  Q.ABS_SPECIES(2).L2NAME    = 'O3 / 576 GHz';
+  Q.ABS_SPECIES(2).UNC_REL   = 0.5;
+  Q.ABS_SPECIES(2).UNC_ABS   = 1e-6;
+  Q.ABS_SPECIES(2).CORRLEN   = 10e3;
+  Q.ABS_SPECIES(2).LOG_ON    = false;
+  %
+  [Q.ABS_SPECIES.ISOFAC]     = deal( 1 );
+  [Q.ABS_SPECIES.SOURCE]     = deal( 'Bdx' );
+  %-------------------------------------------------------------------------
         
   case 24
-        %
-        Q.BACKEND_NR               = 1;
-        Q.FRONTEND_NR              = 3;
-        Q.F_LO_NOMINAL             = 572.762e9;
-        Q.SIDEBAND_LEAKAGE         = 0.05;
-        %
-        Q.GA_START                 = 100;
-        %
-        Q.P_GRID                   = q2_pgrid( [], 150e3 );
-        %
-        Q.F_RANGES                 = [ 576.2e9 576.6e9 ];
-        Q.ZTAN_LIMIT_TOP           = 150e3;
-        Q.ZTAN_LIMIT_BOT           = [ 40e3 40e3 40e3 40e3 ];
-        Q.ZTAN_MIN_RANGE           = [ 45e3 80e3 ];
-        %
-        Q.T.L2                     = true;
-        Q.T.L2NAME                 = 'Temperature / 576 GHz';
-        Q.T.GRID                   = q2_pgrid( 40e3, 150e3, 4 );
-        %
-        Q.ABS_SPECIES(1).TAG{1}    = 'CO-*-575e9-578e9';
-        Q.ABS_SPECIES(1).RETRIEVE  = true;
-        Q.ABS_SPECIES(1).L2        = true;
-        Q.ABS_SPECIES(1).GRID      = q2_pgrid( 40e3, 150e3, 4 );
-        Q.ABS_SPECIES(1).L2NAME    = 'CO / 576 GHz';
-        Q.ABS_SPECIES(1).UNC_REL   = 1;
-        Q.ABS_SPECIES(1).UNC_ABS   = 1e-8;
-        Q.ABS_SPECIES(1).CORRLEN   = 8e3;
-        Q.ABS_SPECIES(1).LOG_ON    = true;
-        %
-        Q.ABS_SPECIES(2).TAG{1}    = 'O3-*-575e9-578e9';
-        Q.ABS_SPECIES(2).RETRIEVE  = true;
-        Q.ABS_SPECIES(2).L2        = true;
-        Q.ABS_SPECIES(2).GRID      = q2_pgrid( 40e3, 110e3, 4 );
-        Q.ABS_SPECIES(2).L2NAME    = 'O3 / 576 GHz';
-        Q.ABS_SPECIES(2).UNC_REL   = 0.5;
-        Q.ABS_SPECIES(2).UNC_ABS   = 1e-6;
-        Q.ABS_SPECIES(2).CORRLEN   = 10e3;
-        Q.ABS_SPECIES(2).LOG_ON    = false;
-        %
-        [Q.ABS_SPECIES.ISOFAC]     = deal( 1 );
-        [Q.ABS_SPECIES.SOURCE]     = deal( 'Bdx' );
+   %
+   Q.BACKEND_NR               = 1;
+   Q.FRONTEND_NR              = 3;
+   Q.F_LO_NOMINAL             = 572.762e9;
+   Q.SIDEBAND_LEAKAGE         = 0.05;
+   %
+   Q.GA_START                 = 100;
+   %
+   Q.P_GRID                   = q2_pgrid( [], 150e3 );
+   %
+   Q.F_RANGES                 = [ 576.2e9 576.6e9 ];
+   Q.ZTAN_LIMIT_TOP           = 150e3;
+   Q.ZTAN_LIMIT_BOT           = [ 40e3 40e3 40e3 40e3 ];
+   Q.ZTAN_MIN_RANGE           = [ 45e3 80e3 ];
+   %
+   Q.T.L2                     = true;
+   Q.T.L2NAME                 = 'Temperature / 576 GHz';
+   Q.T.GRID                   = q2_pgrid( 40e3, 150e3, 4 );
+   %
+   Q.ABS_SPECIES(1).TAG{1}    = 'CO-*-575e9-578e9';
+   Q.ABS_SPECIES(1).RETRIEVE  = true;
+   Q.ABS_SPECIES(1).L2        = true;
+   Q.ABS_SPECIES(1).GRID      = q2_pgrid( 40e3, 150e3, 4 );
+   Q.ABS_SPECIES(1).L2NAME    = 'CO / 576 GHz';
+   Q.ABS_SPECIES(1).UNC_REL   = 1;
+   Q.ABS_SPECIES(1).UNC_ABS   = 1e-8;
+   Q.ABS_SPECIES(1).CORRLEN   = 8e3;
+   Q.ABS_SPECIES(1).LOG_ON    = true;
+   %
+   Q.ABS_SPECIES(2).TAG{1}    = 'O3-*-575e9-578e9';
+   Q.ABS_SPECIES(2).RETRIEVE  = true;
+   Q.ABS_SPECIES(2).L2        = true;
+   Q.ABS_SPECIES(2).GRID      = q2_pgrid( 40e3, 110e3, 4 );
+   Q.ABS_SPECIES(2).L2NAME    = 'O3 / 576 GHz';
+   Q.ABS_SPECIES(2).UNC_REL   = 0.5;
+   Q.ABS_SPECIES(2).UNC_ABS   = 1e-6;
+   Q.ABS_SPECIES(2).CORRLEN   = 10e3;
+   Q.ABS_SPECIES(2).LOG_ON    = false;
+   %
+   [Q.ABS_SPECIES.ISOFAC]     = deal( 1 );
+   [Q.ABS_SPECIES.SOURCE]     = deal( 'Bdx' );
     
  otherwise
   error( 'Frequency band %d is not yet handled.', freqmode );
