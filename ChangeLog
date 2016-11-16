@@ -1,3 +1,16 @@
+2016-11-16  Patrick Eriksson  <patrick.eriksson@chalmers.se>
+
+	* Frequency grid for fmode 13 and 19 updated, after changing
+	position of O3 line.
+
+	* Settings/q_meso.m: Played around with siudeband leakage setting
+	for fmode 13. Tested new feature for this, with settings at the
+	end of the file.
+
+	* Settings/q_stnd.m: Just polished error message at end.
+
+	* Settings/q_versions.m (q_versions): New Qsmr version selected.
+
 2016-11-16  Jimmy Petersson  <jimmy@molflow.com>
 
 	* Build_scripts/: Added matlab compile and docker build scripts for
