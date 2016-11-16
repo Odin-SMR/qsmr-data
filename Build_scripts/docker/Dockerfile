@@ -14,4 +14,4 @@ ENV LD_LIBRARY_PATH /opt/matlab/v90/runtime/glnxa64:/opt/matlab/v90/bin/glnxa64:
 
 COPY build_data_artifact.sh /build_data_artifact.sh
 RUN chmod u+x /build_data_artifact.sh
-ENTRYPOINT /build_data_artifact.sh
+ENTRYPOINT ["/build_data_artifact.sh"]
