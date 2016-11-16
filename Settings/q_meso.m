@@ -9,7 +9,7 @@
 %
 % FORMAT   Q = q_meso(freqmode)
 %
-% OUT   Q          A Q-structure (lacking path and version settings) 
+% OUT   Q          A Q-structure (lacking path and version settings)
 %  IN   freqmode   Frequency mode number
 
 
@@ -20,7 +20,7 @@ function Q = q_meso(freqmode)
 %--- Frequency and inversion modes
 %---------------------------------------------------------------------------
 
-Q.FREQMODE           = freqmode;  
+Q.FREQMODE           = freqmode;
 Q.INVEMODE           = 'meso';
 
 
@@ -31,13 +31,13 @@ Q.INVEMODE           = 'meso';
 Q.F_GRID_NFILL       = 0;
 Q.ABS_P_INTERP_ORDER = 1;
 Q.ABS_T_INTERP_ORDER = 3;
-  
-  
+
+
 %---------------------------------------------------------------------------
 %--- RT and sensor
 %---------------------------------------------------------------------------
 
-Q.REFRACTION_DO      = false;  
+Q.REFRACTION_DO      = false;
 Q.PPATH_LMAX         = 15e3;
 Q.PPATH_LRAYTRACE    = 20e3;
 
@@ -112,143 +112,271 @@ Q.MIN_N_FREQS        = 100;
 %---------------------------------------------------------------------------
 
 switch freqmode
-  
- case 13
-  %
-  Q.BACKEND_NR               = 1;
-  Q.FRONTEND_NR              = 1;
-  Q.F_LO_NOMINAL             = 553.300e9;
-  Q.SIDEBAND_LEAKAGE         = 0.02; 
-  % 
-  Q.GA_START                 = 1000;
-  Q.GA_FACTOR_OK             = sqrt(10);
-  %
-  Q.P_GRID                   = q2_pgrid( [], 150e3 ); 
-  %
-  Q.F_RANGES                 = [ 556.6e9 557.2e9; ];
-  Q.ZTAN_LIMIT_TOP           = 150e3;
-  Q.ZTAN_LIMIT_BOT           = [ 40e3 40e3 40e3 40e3 ];
-  Q.ZTAN_MIN_RANGE           = [ 45e3 80e3 ];
-  %
-  Q.T.L2                     = true;
-  Q.T.L2NAME                 = 'Temperature / 557 (Fmode 13) / 45 to 90 km';
-  Q.T.GRID                   = q2_pgrid( 40e3, 130e3, 4 );
-  %
-  Q.ABS_SPECIES(1).TAG{1}    = 'H2O-*-556e9-557e9';
-  Q.ABS_SPECIES(1).RETRIEVE  = true;
-  Q.ABS_SPECIES(1).L2        = true;
-  Q.ABS_SPECIES(1).L2NAME    = 'H2O / 557 GHz / 45 to 100 km';
-  Q.ABS_SPECIES(1).GRID      = q2_pgrid( 40e3, 150e3, 4 );
-  Q.ABS_SPECIES(1).UNC_REL   = 0.5;
-  Q.ABS_SPECIES(1).UNC_ABS   = 1e-6;
-  Q.ABS_SPECIES(1).CORRLEN   = 10e3;
-  Q.ABS_SPECIES(1).LOG_ON    = false;
-  %
-  Q.ABS_SPECIES(2).TAG{1}    = 'O3-*-556e9-557e9';
-  Q.ABS_SPECIES(2).RETRIEVE  = true;
-  Q.ABS_SPECIES(2).L2        = true;
-  Q.ABS_SPECIES(2).GRID      = q2_pgrid( 40e3, 130e3, 4 );
-  Q.ABS_SPECIES(2).L2NAME    = 'O3 / 557 GHz / 45 to 90 km';
-  Q.ABS_SPECIES(2).UNC_REL   = 0.5;
-  Q.ABS_SPECIES(2).UNC_ABS   = 1e-6;
-  Q.ABS_SPECIES(2).CORRLEN   = 10e3;
-  Q.ABS_SPECIES(2).LOG_ON    = false;
-  %
-  [Q.ABS_SPECIES.ISOFAC]     = deal( 1 );  
-  [Q.ABS_SPECIES.SOURCE]     = deal( 'Bdx' );
-  %-------------------------------------------------------------------------
-
-  
- case 19
-  %
-  Q.BACKEND_NR               = 1;
-  Q.FRONTEND_NR              = 4;
-  Q.F_LO_NOMINAL             = 553.05e9;
-  Q.SIDEBAND_LEAKAGE         = 0.05; 
-  % 
-  Q.GA_START                 = 1000;
-  Q.GA_FACTOR_OK             = sqrt(10);
-  %
-  Q.P_GRID                   = q2_pgrid( [], 150e3 ); 
-  %
-  Q.F_RANGES                 = [ 556.6e9 557.2e9; ];
-  Q.ZTAN_LIMIT_TOP           = 150e3;
-  Q.ZTAN_LIMIT_BOT           = [ 40e3 40e3 40e3 40e3 ];
-  Q.ZTAN_MIN_RANGE           = [ 45e3 80e3 ];
-  %
-  Q.T.L2                     = true;
-  Q.T.L2NAME                 = 'Temperature / 557 (Fmode 19) / 45 to 90 km';
-  Q.T.GRID                   = q2_pgrid( 40e3, 130e3, 4 );
-  %
-  Q.ABS_SPECIES(1).TAG{1}    = 'H2O-*-556e9-557e9';
-  Q.ABS_SPECIES(1).RETRIEVE  = true;
-  Q.ABS_SPECIES(1).L2        = true;
-  Q.ABS_SPECIES(1).L2NAME    = 'H2O / 557 GHz / 45 to 100 km';
-  Q.ABS_SPECIES(1).GRID      = q2_pgrid( 40e3, 150e3, 4 );
-  Q.ABS_SPECIES(1).UNC_REL   = 0.5;
-  Q.ABS_SPECIES(1).UNC_ABS   = 1e-6;
-  Q.ABS_SPECIES(1).CORRLEN   = 10e3;
-  Q.ABS_SPECIES(1).LOG_ON    = false;
-  %
-  Q.ABS_SPECIES(2).TAG{1}    = 'O3-*-556e9-557e9';
-  Q.ABS_SPECIES(2).RETRIEVE  = true;
-  Q.ABS_SPECIES(2).L2        = true;
-  Q.ABS_SPECIES(2).GRID      = q2_pgrid( 40e3, 130e3, 4 );
-  Q.ABS_SPECIES(2).L2NAME    = 'O3 / 557 GHz / 45 to 90 km';
-  Q.ABS_SPECIES(2).UNC_REL   = 0.5;
-  Q.ABS_SPECIES(2).UNC_ABS   = 1e-6;
-  Q.ABS_SPECIES(2).CORRLEN   = 10e3;
-  Q.ABS_SPECIES(2).LOG_ON    = false;
-  %
-  [Q.ABS_SPECIES.ISOFAC]     = deal( 1 );  
-  [Q.ABS_SPECIES.SOURCE]     = deal( 'Bdx' );
-  %-------------------------------------------------------------------------
-  
-  
- case 21
-  %
-  Q.BACKEND_NR               = 1;
-  Q.FRONTEND_NR              = 4;
-  Q.F_LO_NOMINAL             = 547.753e9;
-  Q.SIDEBAND_LEAKAGE         = 0.05;
-  %
-  Q.P_GRID                   = q2_pgrid( [], 150e3 ); 
-  %
-  Q.F_RANGES                 = [ 551.13e9 551.58e9; ];
-  Q.ZTAN_LIMIT_TOP           = 150e3;
-  Q.ZTAN_LIMIT_BOT           = [ 40e3 40e3 40e3 40e3 ];
-  Q.ZTAN_MIN_RANGE           = [ 45e3 80e3 ];
-  %
-  Q.T.L2                     = true;
-  Q.T.LIMITS                 = [100 1000];
-  Q.T.L2NAME                 = 'Temperature / 551 GHz / 45 to 65 km';
-  Q.T.GRID                   = q2_pgrid( 40e3, 150e3, 4 );
-  %
-  Q.ABS_SPECIES(1).TAG{1}    = 'NO-*-541e9-562e9';
-  Q.ABS_SPECIES(1).RETRIEVE  = true;
-  Q.ABS_SPECIES(1).L2        = true;
-  Q.ABS_SPECIES(1).L2NAME    = 'NO / 551 GHz / 45 to 115 km';
-  Q.ABS_SPECIES(1).GRID      = q2_pgrid( 40e3, 150e3, 4 );
-  Q.ABS_SPECIES(1).UNC_REL   = 1;
-  Q.ABS_SPECIES(1).UNC_ABS   = 1e-8;
-  Q.ABS_SPECIES(1).CORRLEN   = 6e3;
-  Q.ABS_SPECIES(1).LOG_ON    = true;
-  %
-  Q.ABS_SPECIES(2).TAG{1}    = 'O3-*-541e9-562e9';
-  Q.ABS_SPECIES(2).RETRIEVE  = true;
-  Q.ABS_SPECIES(2).L2        = true;
-  Q.ABS_SPECIES(2).GRID      = q2_pgrid( 40e3, 110e3, 4 );
-  Q.ABS_SPECIES(2).L2NAME    = 'O3 / 551 GHz / 45 to 90 km';
-  Q.ABS_SPECIES(2).UNC_REL   = 0.5;
-  Q.ABS_SPECIES(2).UNC_ABS   = 1e-6;
-  Q.ABS_SPECIES(2).CORRLEN   = 10e3;
-  Q.ABS_SPECIES(2).LOG_ON    = false;
-  %
-  [Q.ABS_SPECIES.ISOFAC]     = deal( 1 );  
-  [Q.ABS_SPECIES.SOURCE]     = deal( 'Bdx' );
-  %-------------------------------------------------------------------------
-  
     
- otherwise
-  error( 'Frequency band %d is not yet handled (or not defined).', freqmode );
+    case 13
+        %
+        Q.BACKEND_NR               = 1;
+        Q.FRONTEND_NR              = 1;
+        Q.F_LO_NOMINAL             = 553.300e9;
+        Q.SIDEBAND_LEAKAGE         = 0.02;
+        %
+        Q.GA_START                 = 1000;
+        Q.GA_FACTOR_OK             = sqrt(10);
+        %
+        Q.P_GRID                   = q2_pgrid( [], 150e3 );
+        %
+        Q.F_RANGES                 = [ 556.6e9 557.2e9; ];
+        Q.ZTAN_LIMIT_TOP           = 150e3;
+        Q.ZTAN_LIMIT_BOT           = [ 40e3 40e3 40e3 40e3 ];
+        Q.ZTAN_MIN_RANGE           = [ 45e3 80e3 ];
+        %
+        Q.T.L2                     = true;
+        Q.T.L2NAME                 = 'Temperature / 557 (Fmode 13) / 45 to 90 km';
+        Q.T.GRID                   = q2_pgrid( 40e3, 130e3, 4 );
+        %
+        Q.ABS_SPECIES(1).TAG{1}    = 'H2O-*-556e9-557e9';
+        Q.ABS_SPECIES(1).RETRIEVE  = true;
+        Q.ABS_SPECIES(1).L2        = true;
+        Q.ABS_SPECIES(1).L2NAME    = 'H2O / 557 GHz / 45 to 100 km';
+        Q.ABS_SPECIES(1).GRID      = q2_pgrid( 40e3, 150e3, 4 );
+        Q.ABS_SPECIES(1).UNC_REL   = 0.5;
+        Q.ABS_SPECIES(1).UNC_ABS   = 1e-6;
+        Q.ABS_SPECIES(1).CORRLEN   = 10e3;
+        Q.ABS_SPECIES(1).LOG_ON    = false;
+        %
+        Q.ABS_SPECIES(2).TAG{1}    = 'O3-*-556e9-557e9';
+        Q.ABS_SPECIES(2).RETRIEVE  = true;
+        Q.ABS_SPECIES(2).L2        = true;
+        Q.ABS_SPECIES(2).GRID      = q2_pgrid( 40e3, 130e3, 4 );
+        Q.ABS_SPECIES(2).L2NAME    = 'O3 / 557 GHz / 45 to 90 km';
+        Q.ABS_SPECIES(2).UNC_REL   = 0.5;
+        Q.ABS_SPECIES(2).UNC_ABS   = 1e-6;
+        Q.ABS_SPECIES(2).CORRLEN   = 10e3;
+        Q.ABS_SPECIES(2).LOG_ON    = false;
+        %
+        [Q.ABS_SPECIES.ISOFAC]     = deal( 1 );
+        [Q.ABS_SPECIES.SOURCE]     = deal( 'Bdx' );
+        %-------------------------------------------------------------------------
+        
+    case 14
+        %
+        Q.BACKEND_NR               = 2;
+        Q.FRONTEND_NR              = 3;
+        Q.F_LO_NOMINAL             = 572.762e9;
+        Q.SIDEBAND_LEAKAGE         = 0.05;
+        %
+        Q.GA_START                 = 100;
+        %
+        Q.P_GRID                   = q2_pgrid( [], 150e3 );
+        %
+        Q.F_RANGES                 = [ 576.2e9 576.6e9 ];
+        Q.ZTAN_LIMIT_TOP           = 150e3;
+        Q.ZTAN_LIMIT_BOT           = [ 40e3 40e3 40e3 40e3 ];
+        Q.ZTAN_MIN_RANGE           = [ 60e3 80e3 ];
+        %
+        Q.T.L2                     = true;
+        Q.T.L2NAME                 = 'Temperature / 576 GHz';
+        Q.T.GRID                   = q2_pgrid( 40e3, 150e3, 4 );
+        %
+        Q.ABS_SPECIES(1).TAG{1}    = 'CO-*-575e9-578e9';
+        Q.ABS_SPECIES(1).RETRIEVE  = true;
+        Q.ABS_SPECIES(1).L2        = true;
+        Q.ABS_SPECIES(1).GRID      = q2_pgrid( 40e3, 150e3, 4 );
+        Q.ABS_SPECIES(1).L2NAME    = 'CO / 576 GHz';
+        Q.ABS_SPECIES(1).UNC_REL   = 1;
+        Q.ABS_SPECIES(1).UNC_ABS   = 1e-8;
+        Q.ABS_SPECIES(1).CORRLEN   = 8e3;
+        Q.ABS_SPECIES(1).LOG_ON    = true;
+        %
+        Q.ABS_SPECIES(2).TAG{1}    = 'O3-*-575e9-578e9';
+        Q.ABS_SPECIES(2).RETRIEVE  = true;
+        Q.ABS_SPECIES(2).L2        = true;
+        Q.ABS_SPECIES(2).GRID      = q2_pgrid( 40e3, 110e3, 4 );
+        Q.ABS_SPECIES(2).L2NAME    = 'O3 / 576 GHz';
+        Q.ABS_SPECIES(2).UNC_REL   = 0.5;
+        Q.ABS_SPECIES(2).UNC_ABS   = 1e-6;
+        Q.ABS_SPECIES(2).CORRLEN   = 10e3;
+        Q.ABS_SPECIES(2).LOG_ON    = false;
+        %
+        [Q.ABS_SPECIES.ISOFAC]     = deal( 1 );
+        [Q.ABS_SPECIES.SOURCE]     = deal( 'Bdx' );
+        %-------------------------------------------------------------------------
+        
+    case 19
+        %
+        Q.BACKEND_NR               = 1;
+        Q.FRONTEND_NR              = 4;
+        Q.F_LO_NOMINAL             = 553.05e9;
+        Q.SIDEBAND_LEAKAGE         = 0.05;
+        %
+        Q.GA_START                 = 1000;
+        Q.GA_FACTOR_OK             = sqrt(10);
+        %
+        Q.P_GRID                   = q2_pgrid( [], 150e3 );
+        %
+        Q.F_RANGES                 = [ 556.6e9 557.2e9; ];
+        Q.ZTAN_LIMIT_TOP           = 150e3;
+        Q.ZTAN_LIMIT_BOT           = [ 40e3 40e3 40e3 40e3 ];
+        Q.ZTAN_MIN_RANGE           = [ 45e3 80e3 ];
+        %
+        Q.T.L2                     = true;
+        Q.T.L2NAME                 = 'Temperature / 557 (Fmode 19) / 45 to 90 km';
+        Q.T.GRID                   = q2_pgrid( 40e3, 130e3, 4 );
+        %
+        Q.ABS_SPECIES(1).TAG{1}    = 'H2O-*-556e9-557e9';
+        Q.ABS_SPECIES(1).RETRIEVE  = true;
+        Q.ABS_SPECIES(1).L2        = true;
+        Q.ABS_SPECIES(1).L2NAME    = 'H2O / 557 GHz / 45 to 100 km';
+        Q.ABS_SPECIES(1).GRID      = q2_pgrid( 40e3, 150e3, 4 );
+        Q.ABS_SPECIES(1).UNC_REL   = 0.5;
+        Q.ABS_SPECIES(1).UNC_ABS   = 1e-6;
+        Q.ABS_SPECIES(1).CORRLEN   = 10e3;
+        Q.ABS_SPECIES(1).LOG_ON    = false;
+        %
+        Q.ABS_SPECIES(2).TAG{1}    = 'O3-*-556e9-557e9';
+        Q.ABS_SPECIES(2).RETRIEVE  = true;
+        Q.ABS_SPECIES(2).L2        = true;
+        Q.ABS_SPECIES(2).GRID      = q2_pgrid( 40e3, 130e3, 4 );
+        Q.ABS_SPECIES(2).L2NAME    = 'O3 / 557 GHz / 45 to 90 km';
+        Q.ABS_SPECIES(2).UNC_REL   = 0.5;
+        Q.ABS_SPECIES(2).UNC_ABS   = 1e-6;
+        Q.ABS_SPECIES(2).CORRLEN   = 10e3;
+        Q.ABS_SPECIES(2).LOG_ON    = false;
+        %
+        [Q.ABS_SPECIES.ISOFAC]     = deal( 1 );
+        [Q.ABS_SPECIES.SOURCE]     = deal( 'Bdx' );
+        %-------------------------------------------------------------------------
+        
+    case 21
+        %
+        Q.BACKEND_NR               = 1;
+        Q.FRONTEND_NR              = 4;
+        Q.F_LO_NOMINAL             = 547.753e9;
+        Q.SIDEBAND_LEAKAGE         = 0.05;
+        %
+        Q.P_GRID                   = q2_pgrid( [], 150e3 );
+        %
+        Q.F_RANGES                 = [ 551.13e9 551.58e9; ];
+        Q.ZTAN_LIMIT_TOP           = 150e3;
+        Q.ZTAN_LIMIT_BOT           = [ 40e3 40e3 40e3 40e3 ];
+        Q.ZTAN_MIN_RANGE           = [ 45e3 80e3 ];
+        %
+        Q.T.L2                     = true;
+        Q.T.LIMITS                 = [100 1000];
+        Q.T.L2NAME                 = 'Temperature / 551 GHz / 45 to 65 km';
+        Q.T.GRID                   = q2_pgrid( 40e3, 150e3, 4 );
+        %
+        Q.ABS_SPECIES(1).TAG{1}    = 'NO-*-541e9-562e9';
+        Q.ABS_SPECIES(1).RETRIEVE  = true;
+        Q.ABS_SPECIES(1).L2        = true;
+        Q.ABS_SPECIES(1).L2NAME    = 'NO / 551 GHz / 45 to 115 km';
+        Q.ABS_SPECIES(1).GRID      = q2_pgrid( 40e3, 150e3, 4 );
+        Q.ABS_SPECIES(1).UNC_REL   = 1;
+        Q.ABS_SPECIES(1).UNC_ABS   = 1e-8;
+        Q.ABS_SPECIES(1).CORRLEN   = 6e3;
+        Q.ABS_SPECIES(1).LOG_ON    = true;
+        %
+        Q.ABS_SPECIES(2).TAG{1}    = 'O3-*-541e9-562e9';
+        Q.ABS_SPECIES(2).RETRIEVE  = true;
+        Q.ABS_SPECIES(2).L2        = true;
+        Q.ABS_SPECIES(2).GRID      = q2_pgrid( 40e3, 110e3, 4 );
+        Q.ABS_SPECIES(2).L2NAME    = 'O3 / 551 GHz / 45 to 90 km';
+        Q.ABS_SPECIES(2).UNC_REL   = 0.5;
+        Q.ABS_SPECIES(2).UNC_ABS   = 1e-6;
+        Q.ABS_SPECIES(2).CORRLEN   = 10e3;
+        Q.ABS_SPECIES(2).LOG_ON    = false;
+        %
+        [Q.ABS_SPECIES.ISOFAC]     = deal( 1 );
+        [Q.ABS_SPECIES.SOURCE]     = deal( 'Bdx' );
+        %-------------------------------------------------------------------------
+        
+    case 22
+        %
+        Q.BACKEND_NR               = 2;
+        Q.FRONTEND_NR              = 3;
+        Q.F_LO_NOMINAL             = 572.964e9;
+        Q.SIDEBAND_LEAKAGE         = 0.05;
+        %
+        Q.GA_START                 = 100;
+        %
+        Q.P_GRID                   = q2_pgrid( [], 150e3 );
+        %
+        Q.F_RANGES                 = [ 576.2e9 576.6e9 ];
+        Q.ZTAN_LIMIT_TOP           = 150e3;
+        Q.ZTAN_LIMIT_BOT           = [ 40e3 40e3 40e3 40e3 ];
+        Q.ZTAN_MIN_RANGE           = [ 45e3 80e3 ];
+        %
+        Q.T.L2                     = true;
+        Q.T.L2NAME                 = 'Temperature / 576 GHz';
+        Q.T.GRID                   = q2_pgrid( 40e3, 150e3, 4 );
+        %
+        Q.ABS_SPECIES(1).TAG{1}    = 'CO-*-575e9-578e9';
+        Q.ABS_SPECIES(1).RETRIEVE  = true;
+        Q.ABS_SPECIES(1).L2        = true;
+        Q.ABS_SPECIES(1).GRID      = q2_pgrid( 40e3, 150e3, 4 );
+        Q.ABS_SPECIES(1).L2NAME    = 'CO / 576 GHz';
+        Q.ABS_SPECIES(1).UNC_REL   = 1;
+        Q.ABS_SPECIES(1).UNC_ABS   = 1e-8;
+        Q.ABS_SPECIES(1).CORRLEN   = 8e3;
+        Q.ABS_SPECIES(1).LOG_ON    = true;
+        %
+        Q.ABS_SPECIES(2).TAG{1}    = 'O3-*-575e9-578e9';
+        Q.ABS_SPECIES(2).RETRIEVE  = true;
+        Q.ABS_SPECIES(2).L2        = true;
+        Q.ABS_SPECIES(2).GRID      = q2_pgrid( 40e3, 110e3, 4 );
+        Q.ABS_SPECIES(2).L2NAME    = 'O3 / 576 GHz';
+        Q.ABS_SPECIES(2).UNC_REL   = 0.5;
+        Q.ABS_SPECIES(2).UNC_ABS   = 1e-6;
+        Q.ABS_SPECIES(2).CORRLEN   = 10e3;
+        Q.ABS_SPECIES(2).LOG_ON    = false;
+        %
+        [Q.ABS_SPECIES.ISOFAC]     = deal( 1 );
+        [Q.ABS_SPECIES.SOURCE]     = deal( 'Bdx' );
+        %-------------------------------------------------------------------------
+        
+    case 24
+        %
+        Q.BACKEND_NR               = 1;
+        Q.FRONTEND_NR              = 3;
+        Q.F_LO_NOMINAL             = 572.762e9;
+        Q.SIDEBAND_LEAKAGE         = 0.05;
+        %
+        Q.GA_START                 = 100;
+        %
+        Q.P_GRID                   = q2_pgrid( [], 150e3 );
+        %
+        Q.F_RANGES                 = [ 576.2e9 576.6e9 ];
+        Q.ZTAN_LIMIT_TOP           = 150e3;
+        Q.ZTAN_LIMIT_BOT           = [ 40e3 40e3 40e3 40e3 ];
+        Q.ZTAN_MIN_RANGE           = [ 45e3 80e3 ];
+        %
+        Q.T.L2                     = true;
+        Q.T.L2NAME                 = 'Temperature / 576 GHz';
+        Q.T.GRID                   = q2_pgrid( 40e3, 150e3, 4 );
+        %
+        Q.ABS_SPECIES(1).TAG{1}    = 'CO-*-575e9-578e9';
+        Q.ABS_SPECIES(1).RETRIEVE  = true;
+        Q.ABS_SPECIES(1).L2        = true;
+        Q.ABS_SPECIES(1).GRID      = q2_pgrid( 40e3, 150e3, 4 );
+        Q.ABS_SPECIES(1).L2NAME    = 'CO / 576 GHz';
+        Q.ABS_SPECIES(1).UNC_REL   = 1;
+        Q.ABS_SPECIES(1).UNC_ABS   = 1e-8;
+        Q.ABS_SPECIES(1).CORRLEN   = 8e3;
+        Q.ABS_SPECIES(1).LOG_ON    = true;
+        %
+        Q.ABS_SPECIES(2).TAG{1}    = 'O3-*-575e9-578e9';
+        Q.ABS_SPECIES(2).RETRIEVE  = true;
+        Q.ABS_SPECIES(2).L2        = true;
+        Q.ABS_SPECIES(2).GRID      = q2_pgrid( 40e3, 110e3, 4 );
+        Q.ABS_SPECIES(2).L2NAME    = 'O3 / 576 GHz';
+        Q.ABS_SPECIES(2).UNC_REL   = 0.5;
+        Q.ABS_SPECIES(2).UNC_ABS   = 1e-6;
+        Q.ABS_SPECIES(2).CORRLEN   = 10e3;
+        Q.ABS_SPECIES(2).LOG_ON    = false;
+        %
+        [Q.ABS_SPECIES.ISOFAC]     = deal( 1 );
+        [Q.ABS_SPECIES.SOURCE]     = deal( 'Bdx' );
+        
+    otherwise
+        error( 'Frequency band %d is not yet handled (or not defined).', freqmode );
 end
