@@ -1,5 +1,19 @@
 2016-11-16  Patrick Eriksson  <patrick.eriksson@chalmers.se>
 
+	* Mscripts_precalc/q2_precalc_fgrid.m:
+	* Mscripts_precalc/q2_precalc_abslookup.m: It is now not mandatory
+	to specify a workarea. Default is instead to create a temporary folder.
+
+	* Settings/q_versions.m: Added anote about ARTS svn revision number.
+
+	* DataInput/Absorption/smr_linedata.notes: Documentation of the
+	change below.
+
+	* DataInput/Absorption/smr_linedata.xml: Put in JPL freq and I for
+	O3-666 at 556.7 GHz.
+
+2016-11-16  Patrick Eriksson  <patrick.eriksson@chalmers.se>
+
 	* Settings/q_versions.m: New Qsmr version.
 
 	* Settings/q_meso.m: ABS_SPECIES.SOURCE is now set to Bdx. Updates

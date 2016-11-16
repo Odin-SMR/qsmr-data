@@ -4,19 +4,32 @@
 %    Bdx database (Q.ABS_SPECIES.SOURCE = 'Bdx') and MSIS90 (Q.T_SOURCE =
 %    'MSIS90').
 %
-% FORMAT   q2_precalc_abslookup(QQ,P,workfolder,precs)
+% FORMAT   q2_precalc_abslookup(QQ,P[,workfolder,precs,do_cubic])
 %        
 % IN    QQ      An array of Q structures
 %       P       A P structure
-%       workfolder   Folder to use for running ARTS.
+% OPT   workfolder   Folder to use for running ARTS. Default is create a
+%                    temporary folder in Q.FOLDER_WORK
 % OPT   precs        Vector of precision limits [K]. Default is 200 mK.
 %       do_cubic Flag to use f_grid assuming cubic interpolation. Default is false.
 
 % 2015-05-25   Created by Patrick Eriksson.
 
-function q2_precalc_abslookup(QQ,P,workfolder,varargin)
+function q2_precalc_abslookup(QQ,P,varargin)
 %
-[precs,do_cubic] = optargs( varargin, { 0.2, false } );
+[workfolder,precs,do_cubic] = optargs( varargin, { [], 0.2, false } );
+
+
+%- Create a temporary work folder?
+if isempty(workfolder)
+  [R.workfolder,rm_wfolder] = q2_create_workfolder( QQ(1) );
+  %
+  if rm_wfolder
+    % Make sure temporary folders are removed
+    cu = onCleanup( @()q2_delete_workfolder( R.workfolder ) );
+    clear rm_workfolder
+  end  
+end
 
 
 %- Check folder and file names
