@@ -1,3 +1,18 @@
+2016-11-16  Patrick Eriksson  <patrick.eriksson@chalmers.se>
+
+	* Settings/q_versions.m: New Qsmr version.
+
+	* Settings/q_meso.m: ABS_SPECIES.SOURCE is now set to Bdx. Updates
+	for fmode 13 and 19.
+
+	* Settings/q_stnd.m: ABS_SPECIES.SOURCE is now set to Bdx.
+
+	* DataPrecalced/SpeciesApriori/Bdx: Species that have 1e-20 in
+	input files were updates after fix below.
+
+	* Mscripts_precalc/q2_precalc_bdx_apriori.m: Added a fix for 1e-20
+	fill values.
+
 2016-11-15  Patrick Eriksson  <patrick.eriksson@chalmers.se>
 
 	* Settings/q_paths.m: Q.FOLDER_BDX now also set.

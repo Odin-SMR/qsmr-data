@@ -83,6 +83,20 @@ for s = 1:length(species)
                              Bdx.DATA(:,:,:,13) ) / 2; 
   Bdx.DATA(:,:,:,14) = Bdx.DATA(:,:,:,1);
   
+  % Replace "fill values" of 1e-20 with closest value 
+  if any( Bdx.DATA(:) == 1e-20 )
+    for i = 1:size(Bdx.DATA,2)
+      for j = 1:size(Bdx.DATA,4)
+        i2 = find( Bdx.DATA(:,i,1,j) <= 1e-20 );
+        if ~isempty(i2)
+          i1 = find( Bdx.DATA(:,i,1,j) > 1e-20 );
+          assert( all( i2 > i1(end) ) );
+          Bdx.DATA(i2,i,1,j) = Bdx.DATA(i1(end),i,1,j);
+        end
+      end
+    end
+  end
+  
   save( fullfile(outfolder,sprintf('apriori_%s.mat',species{s})), ...
                                                             'Bdx', '-v6' );
 end

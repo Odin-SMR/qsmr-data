@@ -208,7 +208,7 @@ switch freqmode
   Q.ABS_SPECIES(11).RETRIEVE = false;
   %
   [Q.ABS_SPECIES.ISOFAC]     = deal( 1 );  
-  [Q.ABS_SPECIES.SOURCE]     = deal( 'WebApi' );
+  [Q.ABS_SPECIES.SOURCE]     = deal( 'Bdx' );
   %-------------------------------------------------------------------------
 
     
@@ -290,7 +290,7 @@ switch freqmode
   Q.ABS_SPECIES(9).TAG{1}    = 'H2O2-*-534e9-554e9';
   Q.ABS_SPECIES(9).RETRIEVE  = false;
   %
-  [Q.ABS_SPECIES.SOURCE]     = deal( 'WebApi' );
+  [Q.ABS_SPECIES.SOURCE]     = deal( 'Bdx' );
   %-------------------------------------------------------------------------
   
   
