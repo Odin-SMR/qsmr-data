@@ -8,6 +8,6 @@
 
 function Q = q_versions(Q)
 
-Q.VERSION_ARTS = 'arts-2.3.564';
+Q.VERSION_ARTS = 'arts-2.3.564';    % This is revision 10132
 
-Q.VERSION_QSMR = 'qsmr-beta-6';
+Q.VERSION_QSMR = 'qsmr-beta-7'; 

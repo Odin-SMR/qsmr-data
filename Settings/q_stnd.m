@@ -295,5 +295,5 @@ switch freqmode
   
   
  otherwise
-  error( 'Frequency band %d is not yet handled (or not defined).', freqmode );
+  error( 'Frequency band %d is not yet handled.', freqmode );
 end
