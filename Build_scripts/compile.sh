@@ -11,7 +11,7 @@ cd mcr && ${MATLAB_ROOT}/bin/mcc \
 	-a ../../Mscripts_precalc \
 	-a ../../Mscripts_qsystem \
     -a ../../Settings \
-	-a ../../../qsmr/Mscripts_arts \    
+	-a ../../../qsmr/Mscripts_arts \
 	-a ../../../qsmr/Mscripts_atmlab \
     -a ../../../qsmr/Mscripts_atmlab/time \
     -a ../../../qsmr/Mscripts_atmlab/xml \
