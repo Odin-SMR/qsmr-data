@@ -8,7 +8,11 @@ function []=runprecalc(out_path, invemode, freqmode)
    Q = q_paths( Q );
    Q = q_versions( Q );
    
-   P = p_stnd
+   if invemode == 'meso'
+       P = p_stnd(true);
+   else
+       P = p_stnd
+   end
 
    % Fix paths
    Q.ARTS               = 'LD_LIBRARY_PATH="" arts';

@@ -1,3 +1,7 @@
+2016-11-18  Jimmy Petersson <jimmy@molflow.com>
+
+	* Build_scripts/runprecalc.m: Adapt to p_stnd depending on invemode.
+
 2016-11-16  Patrick Eriksson  <patrick.eriksson@chalmers.se>
 
 	* Frequency grids for fmode 14, 21, 22 and 24 (re-)generated. Did
