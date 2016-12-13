@@ -1,3 +1,7 @@
+2016-12-13  Patrick Eriksson  < patrick.eriksson@chalmers.se>
+
+	* Settings/q_versions.m: Just moved to Q.VERSION_QSMR to present version.
+
 2016-11-18  Jimmy Petersson <jimmy@molflow.com>
 
 	* Build_scripts/runprecalc.m: Adapt to p_stnd depending on invemode.
