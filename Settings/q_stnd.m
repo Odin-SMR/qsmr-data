@@ -93,7 +93,7 @@ Q.T.LIMITS           = [100 350];
 
 Q.QFILT_TSPILL       = true;
 Q.QFILT_TREC         = true;
-Q.QFILT_NOISE        = true;
+Q.QFILT_NOISE        = false;    % Should be true, now false due to bad L1b  
 Q.QFILT_SCANNING     = true;
 Q.QFILT_SPECTRA      = false;
 Q.QFILT_TBRANGE      = true;
