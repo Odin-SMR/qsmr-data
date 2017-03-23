@@ -91,18 +91,18 @@ Q.T.LIMITS           = [100 350];
 
 Q.QFILT_TSPILL       = true;
 Q.QFILT_TREC         = true;
-Q.QFILT_NOISE        = true;    % Should be true, now false due to bad L1b  
+Q.QFILT_NOISE        = true; 
 Q.QFILT_SCANNING     = true;
-Q.QFILT_SPECTRA      = false;
+Q.QFILT_SPECTRA      = true;
 Q.QFILT_TBRANGE      = true;
 Q.QFILT_TINT         = true;
-Q.QFILT_REF1         = false;
+Q.QFILT_REF1         = true;
 Q.QFILT_REF2         = false;
 Q.QFILT_MOON         = true;
-Q.QFILT_LAG0MAX      = 1;
+Q.QFILT_FCORR        = true;
+Q.QFILT_LAG0MAX      = 2.5;
 
 Q.MIN_N_SPECTRA      = 8;
-
 Q.MIN_N_FREQS        = 100;
 
 

@@ -1,3 +1,11 @@
+2017-03-23  Patrick Eriksson  <patrick.eriksson@chalmers.se>
+
+	* Settings/q_meso.m:
+	* Settings/q_stnd.m: Revision of QFILT settings. Done together
+	with Andreas. 
+
+	* Settings/q_fields.rst: Added QFILT_FCORR.
+
 2016-12-20  Patrick Eriksson  <patrick.eriksson@chalmers.se>
 
 	* Settings/q_stnd.m:

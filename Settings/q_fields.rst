@@ -229,6 +229,10 @@ P_GRID
    variable with the same name. Note that this setting is also used when
    pre-calculating absorption lookup tables.
 
+QFILT_FCORR
+   A logical. So far only used for CO modes. Set to true to remove data were
+   the frequency correction failed or is uncertain.
+
 QFILT_LAG0MAX
    A logical. Sets the maximum allowed value of ZeroLagVar. This quality
    filtering operates on AC sub-bands.
