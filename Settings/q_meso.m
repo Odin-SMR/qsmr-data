@@ -138,7 +138,7 @@ switch freqmode
   Q.ABS_SPECIES(1).TAG{1}    = 'H2O-*-556e9-557e9';
   Q.ABS_SPECIES(1).RETRIEVE  = true;
   Q.ABS_SPECIES(1).L2        = true;
-  Q.ABS_SPECIES(1).L2NAME    = 'H2O / 557 GHz / 45 to 100 km';
+  Q.ABS_SPECIES(1).L2NAME    = 'H2O - 557 GHz - 45 to 100 km';
   Q.ABS_SPECIES(1).GRID      = q2_pgrid( 40e3, 150e3, 4 );
   Q.ABS_SPECIES(1).UNC_REL   = 0.5;
   Q.ABS_SPECIES(1).UNC_ABS   = 1e-6;
@@ -149,7 +149,7 @@ switch freqmode
   Q.ABS_SPECIES(2).RETRIEVE  = true;
   Q.ABS_SPECIES(2).L2        = true;
   Q.ABS_SPECIES(2).GRID      = q2_pgrid( 40e3, 130e3, 4 );
-  Q.ABS_SPECIES(2).L2NAME    = 'O3 / 557 GHz / 45 to 90 km';
+  Q.ABS_SPECIES(2).L2NAME    = 'O3 - 557 GHz - 45 to 90 km';
   Q.ABS_SPECIES(2).UNC_REL   = 0.5;
   Q.ABS_SPECIES(2).UNC_ABS   = 1e-6;
   Q.ABS_SPECIES(2).CORRLEN   = 10e3;
@@ -183,7 +183,7 @@ switch freqmode
   Q.ABS_SPECIES(1).RETRIEVE  = true;
   Q.ABS_SPECIES(1).L2        = true;
   Q.ABS_SPECIES(1).GRID      = q2_pgrid( 40e3, 150e3, 4 );
-  Q.ABS_SPECIES(1).L2NAME    = 'CO / 576 GHz';
+  Q.ABS_SPECIES(1).L2NAME    = 'CO - 576 GHz';
   Q.ABS_SPECIES(1).UNC_REL   = 1;
   Q.ABS_SPECIES(1).UNC_ABS   = 1e-8;
   Q.ABS_SPECIES(1).CORRLEN   = 8e3;
@@ -193,7 +193,7 @@ switch freqmode
   Q.ABS_SPECIES(2).RETRIEVE  = true;
   Q.ABS_SPECIES(2).L2        = true;
   Q.ABS_SPECIES(2).GRID      = q2_pgrid( 40e3, 110e3, 4 );
-  Q.ABS_SPECIES(2).L2NAME    = 'O3 / 576 GHz';
+  Q.ABS_SPECIES(2).L2NAME    = 'O3 - 576 GHz';
   Q.ABS_SPECIES(2).UNC_REL   = 0.5;
   Q.ABS_SPECIES(2).UNC_ABS   = 1e-6;
   Q.ABS_SPECIES(2).CORRLEN   = 10e3;
@@ -228,7 +228,7 @@ switch freqmode
   Q.ABS_SPECIES(1).TAG{1}    = 'H2O-*-556e9-557e9';
   Q.ABS_SPECIES(1).RETRIEVE  = true;
   Q.ABS_SPECIES(1).L2        = true;
-  Q.ABS_SPECIES(1).L2NAME    = 'H2O / 557 GHz / 45 to 100 km';
+  Q.ABS_SPECIES(1).L2NAME    = 'H2O - 557 GHz - 45 to 100 km';
   Q.ABS_SPECIES(1).GRID      = q2_pgrid( 40e3, 150e3, 4 );
   Q.ABS_SPECIES(1).UNC_REL   = 0.5;
   Q.ABS_SPECIES(1).UNC_ABS   = 1e-6;
@@ -239,7 +239,7 @@ switch freqmode
   Q.ABS_SPECIES(2).RETRIEVE  = true;
   Q.ABS_SPECIES(2).L2        = true;
   Q.ABS_SPECIES(2).GRID      = q2_pgrid( 40e3, 130e3, 4 );
-  Q.ABS_SPECIES(2).L2NAME    = 'O3 / 557 GHz / 45 to 90 km';
+  Q.ABS_SPECIES(2).L2NAME    = 'O3 - 557 GHz - 45 to 90 km';
   Q.ABS_SPECIES(2).UNC_REL   = 0.5;
   Q.ABS_SPECIES(2).UNC_ABS   = 1e-6;
   Q.ABS_SPECIES(2).CORRLEN   = 10e3;
@@ -272,7 +272,7 @@ switch freqmode
   Q.ABS_SPECIES(1).TAG{1}    = 'NO-*-541e9-562e9';
   Q.ABS_SPECIES(1).RETRIEVE  = true;
   Q.ABS_SPECIES(1).L2        = true;
-  Q.ABS_SPECIES(1).L2NAME    = 'NO / 551 GHz / 45 to 115 km';
+  Q.ABS_SPECIES(1).L2NAME    = 'NO - 551 GHz - 45 to 115 km';
   Q.ABS_SPECIES(1).GRID      = q2_pgrid( 40e3, 150e3, 4 );
   Q.ABS_SPECIES(1).UNC_REL   = 1;
   Q.ABS_SPECIES(1).UNC_ABS   = 1e-8;
@@ -283,7 +283,7 @@ switch freqmode
   Q.ABS_SPECIES(2).RETRIEVE  = true;
   Q.ABS_SPECIES(2).L2        = true;
   Q.ABS_SPECIES(2).GRID      = q2_pgrid( 40e3, 110e3, 4 );
-  Q.ABS_SPECIES(2).L2NAME    = 'O3 / 551 GHz / 45 to 90 km';
+  Q.ABS_SPECIES(2).L2NAME    = 'O3 - 551 GHz - 45 to 90 km';
   Q.ABS_SPECIES(2).UNC_REL   = 0.5;
   Q.ABS_SPECIES(2).UNC_ABS   = 1e-6;
   Q.ABS_SPECIES(2).CORRLEN   = 10e3;
@@ -317,7 +317,7 @@ switch freqmode
   Q.ABS_SPECIES(1).RETRIEVE  = true;
   Q.ABS_SPECIES(1).L2        = true;
   Q.ABS_SPECIES(1).GRID      = q2_pgrid( 40e3, 150e3, 4 );
-  Q.ABS_SPECIES(1).L2NAME    = 'CO / 576 GHz';
+  Q.ABS_SPECIES(1).L2NAME    = 'CO - 576 GHz';
   Q.ABS_SPECIES(1).UNC_REL   = 1;
   Q.ABS_SPECIES(1).UNC_ABS   = 1e-8;
   Q.ABS_SPECIES(1).CORRLEN   = 8e3;
@@ -327,7 +327,7 @@ switch freqmode
   Q.ABS_SPECIES(2).RETRIEVE  = true;
   Q.ABS_SPECIES(2).L2        = true;
   Q.ABS_SPECIES(2).GRID      = q2_pgrid( 40e3, 110e3, 4 );
-  Q.ABS_SPECIES(2).L2NAME    = 'O3 / 576 GHz';
+  Q.ABS_SPECIES(2).L2NAME    = 'O3 - 576 GHz';
   Q.ABS_SPECIES(2).UNC_REL   = 0.5;
   Q.ABS_SPECIES(2).UNC_ABS   = 1e-6;
   Q.ABS_SPECIES(2).CORRLEN   = 10e3;
@@ -361,7 +361,7 @@ switch freqmode
    Q.ABS_SPECIES(1).RETRIEVE  = true;
    Q.ABS_SPECIES(1).L2        = true;
    Q.ABS_SPECIES(1).GRID      = q2_pgrid( 40e3, 150e3, 4 );
-   Q.ABS_SPECIES(1).L2NAME    = 'CO / 576 GHz';
+   Q.ABS_SPECIES(1).L2NAME    = 'CO - 576 GHz';
    Q.ABS_SPECIES(1).UNC_REL   = 1;
    Q.ABS_SPECIES(1).UNC_ABS   = 1e-8;
    Q.ABS_SPECIES(1).CORRLEN   = 8e3;
@@ -371,7 +371,7 @@ switch freqmode
    Q.ABS_SPECIES(2).RETRIEVE  = true;
    Q.ABS_SPECIES(2).L2        = true;
    Q.ABS_SPECIES(2).GRID      = q2_pgrid( 40e3, 110e3, 4 );
-   Q.ABS_SPECIES(2).L2NAME    = 'O3 / 576 GHz';
+   Q.ABS_SPECIES(2).L2NAME    = 'O3 - 576 GHz';
    Q.ABS_SPECIES(2).UNC_REL   = 0.5;
    Q.ABS_SPECIES(2).UNC_ABS   = 1e-6;
    Q.ABS_SPECIES(2).CORRLEN   = 10e3;
