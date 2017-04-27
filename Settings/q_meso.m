@@ -119,7 +119,7 @@ switch freqmode
   Q.FRONTEND_NR              = 1;
   Q.F_LO_NOMINAL             = 553.300e9;
   %
-  Q.SIDEBAND_LEAKAGE         = sideband_settings( freqmode ); 
+  Q.SIDEBAND_LEAKAGE         = 0.05;%sideband_settings( freqmode ); 
   % 
   Q.GA_START                 = 1000;
   Q.GA_FACTOR_OK             = sqrt(10);
@@ -143,7 +143,7 @@ switch freqmode
   Q.ABS_SPECIES(1).UNC_REL   = 0.5;
   Q.ABS_SPECIES(1).UNC_ABS   = 1e-6;
   Q.ABS_SPECIES(1).CORRLEN   = 10e3;
-  Q.ABS_SPECIES(1).LOG_ON    = false;
+  Q.ABS_SPECIES(1).LOG_ON    = true;
   %
   Q.ABS_SPECIES(2).TAG{1}    = 'O3-*-556e9-557e9';
   Q.ABS_SPECIES(2).RETRIEVE  = true;
