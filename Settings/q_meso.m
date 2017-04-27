@@ -132,7 +132,7 @@ switch freqmode
   Q.ZTAN_MIN_RANGE           = [ 45e3 80e3 ];
   %
   Q.T.L2                     = true;
-  Q.T.L2NAME                 = 'Temperature / 557 (Fmode 13) / 45 to 90 km';
+  Q.T.L2NAME                 = 'Temperature - 557 (Fmode 13) - 45 to 90 km';
   Q.T.GRID                   = q2_pgrid( 40e3, 130e3, 4 );
   %
   Q.ABS_SPECIES(1).TAG{1}    = 'H2O-*-556e9-557e9';
@@ -176,7 +176,7 @@ switch freqmode
   Q.ZTAN_MIN_RANGE           = [ 60e3 80e3 ];
   %
   Q.T.L2                     = true;
-  Q.T.L2NAME                 = 'Temperature / 576 GHz';
+  Q.T.L2NAME                 = 'Temperature - 576 GHz';
   Q.T.GRID                   = q2_pgrid( 40e3, 150e3, 4 );
   %
   Q.ABS_SPECIES(1).TAG{1}    = 'CO-*-575e9-578e9';
@@ -222,7 +222,7 @@ switch freqmode
   Q.ZTAN_MIN_RANGE           = [ 45e3 80e3 ];
   %
   Q.T.L2                     = true;
-  Q.T.L2NAME                 = 'Temperature / 557 (Fmode 19) / 45 to 90 km';
+  Q.T.L2NAME                 = 'Temperature - 557 (Fmode 19) - 45 to 90 km';
   Q.T.GRID                   = q2_pgrid( 40e3, 130e3, 4 );
   %
   Q.ABS_SPECIES(1).TAG{1}    = 'H2O-*-556e9-557e9';
@@ -266,7 +266,7 @@ switch freqmode
   %
   Q.T.L2                     = true;
   Q.T.LIMITS                 = [100 1000];
-  Q.T.L2NAME                 = 'Temperature / 551 GHz / 45 to 65 km';
+  Q.T.L2NAME                 = 'Temperature - 551 GHz - 45 to 65 km';
   Q.T.GRID                   = q2_pgrid( 40e3, 150e3, 4 );
   %
   Q.ABS_SPECIES(1).TAG{1}    = 'NO-*-541e9-562e9';
@@ -310,7 +310,7 @@ switch freqmode
   Q.ZTAN_MIN_RANGE           = [ 45e3 80e3 ];
   %
   Q.T.L2                     = true;
-  Q.T.L2NAME                 = 'Temperature / 576 GHz';
+  Q.T.L2NAME                 = 'Temperature - 576 GHz';
   Q.T.GRID                   = q2_pgrid( 40e3, 150e3, 4 );
   %
   Q.ABS_SPECIES(1).TAG{1}    = 'CO-*-575e9-578e9';
@@ -354,7 +354,7 @@ switch freqmode
    Q.ZTAN_MIN_RANGE           = [ 45e3 80e3 ];
    %
    Q.T.L2                     = true;
-   Q.T.L2NAME                 = 'Temperature / 576 GHz';
+   Q.T.L2NAME                 = 'Temperature - 576 GHz';
    Q.T.GRID                   = q2_pgrid( 40e3, 150e3, 4 );
    %
    Q.ABS_SPECIES(1).TAG{1}    = 'CO-*-575e9-578e9';
