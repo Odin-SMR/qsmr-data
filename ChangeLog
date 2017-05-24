@@ -1,8 +1,12 @@
 2017-03-23  Patrick Eriksson  <patrick.eriksson@chalmers.se>
 
+	* Build_scripts/docler/build_data_artifact.sh: Added missing mkdir.
+
+2017-03-23  Patrick Eriksson  <patrick.eriksson@chalmers.se>
+
 	* Settings/q_meso.m:
 	* Settings/q_stnd.m: Revision of QFILT settings. Done together
-	with Andreas. 
+	with Andreas.
 
 	* Settings/q_fields.rst: Added QFILT_FCORR.
 
