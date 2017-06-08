@@ -128,7 +128,7 @@ switch freqmode
   %
   Q.F_RANGES                 = [ 556.6e9 557.2e9; ];
   Q.ZTAN_LIMIT_TOP           = 150e3;
-  Q.ZTAN_LIMIT_BOT           = [ 60e3 60e3 60e3 60e3 ];
+  Q.ZTAN_LIMIT_BOT           = [ 45e3 45e3 45e3 45e3 ];
   Q.ZTAN_MIN_RANGE           = [ 60e3 80e3 ];
   %
   Q.T.L2                     = true;
