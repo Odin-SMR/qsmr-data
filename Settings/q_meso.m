@@ -128,8 +128,8 @@ switch freqmode
   %
   Q.F_RANGES                 = [ 556.6e9 557.2e9; ];
   Q.ZTAN_LIMIT_TOP           = 150e3;
-  Q.ZTAN_LIMIT_BOT           = [ 40e3 40e3 40e3 40e3 ];
-  Q.ZTAN_MIN_RANGE           = [ 45e3 80e3 ];
+  Q.ZTAN_LIMIT_BOT           = [ 60e3 60e3 60e3 60e3 ];
+  Q.ZTAN_MIN_RANGE           = [ 60e3 80e3 ];
   %
   Q.T.L2                     = true;
   Q.T.L2NAME                 = 'Temperature - 557 (Fmode 13) - 45 to 90 km';
