@@ -170,7 +170,7 @@ switch freqmode
   %
   Q.P_GRID                   = q2_pgrid( [], 150e3 );
   %
-  Q.F_RANGES                 = [ 576.220e9 576.360e9 ];
+  Q.F_RANGES                 = [ 576.118e9 576.418e9 ];
   Q.ZTAN_LIMIT_TOP           = 150e3;
   Q.ZTAN_LIMIT_BOT           = [ 40e3 40e3 40e3 40e3 ];
   Q.ZTAN_MIN_RANGE           = [ 65e3 80e3 ];
@@ -304,7 +304,7 @@ switch freqmode
   %
   Q.P_GRID                   = q2_pgrid( [], 150e3 );
   %
-  Q.F_RANGES                 = [ 576.220e9 576.360e9 ];
+  Q.F_RANGES                 = [ 576.118e9 576.418e9 ];
   Q.ZTAN_LIMIT_TOP           = 150e3;
   Q.ZTAN_LIMIT_BOT           = [ 40e3 40e3 40e3 40e3 ];
   Q.ZTAN_MIN_RANGE           = [ 65e3 80e3 ];
@@ -348,7 +348,7 @@ switch freqmode
    %
    Q.P_GRID                   = q2_pgrid( [], 150e3 );
    %
-   Q.F_RANGES                 = [ 576.220e9 576.360e9 ];
+   Q.F_RANGES                 = [ 576.118e9 576.418e9 ];
    Q.ZTAN_LIMIT_TOP           = 150e3;
    Q.ZTAN_LIMIT_BOT           = [ 40e3 40e3 40e3 40e3 ];
    Q.ZTAN_MIN_RANGE           = [ 65e3 80e3 ];
