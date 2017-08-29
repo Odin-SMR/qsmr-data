@@ -1,3 +1,8 @@
+2017-08-29  Bengt Rydberg  <bengt.rydberg@molflow.com>
+
+        * Build_scripts/build.sh: added argument handling of docker build
+        script
+
 2017-03-23  Patrick Eriksson  <patrick.eriksson@chalmers.se>
 
 	* Build_scripts/docler/build_data_artifact.sh: Added missing mkdir.
