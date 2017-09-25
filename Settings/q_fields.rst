@@ -278,9 +278,11 @@ QFILT_TSPILL
    flag. This quality filtering operates on tangent altitudes.
    
 SIDEBAND_LEAKAGE
-   A scalar. Relative contribution of the sideband. So far the sideband leakage
-   is assumed to be flat over each frequency band.
-
+   A scalar or 'model'. If a scalar value, this is taken as the sideband
+   leakage. This leakage is assumed to be flat over the (main) frequency band.
+   If set to 'model', the sideband response is set according a model based on
+   Tcal and SBPATH.
+   
 STOP_DX
    OEM stop criterion. The iteration is halted when the change in x 
    is < stop_dx. Eq. 5.29 in the book by Rodgers is followed, but a

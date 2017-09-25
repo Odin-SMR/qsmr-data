@@ -119,7 +119,7 @@ switch freqmode
   Q.FRONTEND_NR              = 1;
   Q.F_LO_NOMINAL             = 553.300e9;
   %
-  Q.SIDEBAND_LEAKAGE         = 0.05;%sideband_settings( freqmode ); 
+  Q.SIDEBAND_LEAKAGE         = 0.05;
   % 
   Q.GA_START                 = 1000;
   Q.GA_FACTOR_OK             = sqrt(10);
@@ -387,44 +387,3 @@ return
 
 
 
-
-%---------------------------------------------------------------------------
-%---------------------------------------------------------------------------
-%---------------------------------------------------------------------------
-
-function SB = sideband_settings( freqmode )
-
-% General setings
-%
-SB = gf_empty( 3 );
-%
-SB.NAME       = sprintf( 'Sideband filter lookup table for fmode %d', freqmode );
-SB.SOURCE     = mfilename; 
-SB.DATA_NAME  = 'Primary band weight';
-SB.DATA_NAME  = '[0-1]';
-SB.GRID1_NAME = 'Frequency';
-SB.GRID1_UNIT = 'Hz';
-SB.GRID2_NAME = 'Temperature';
-SB.GRID2_UNIT = 'K';
-SB.GRID3_NAME = 'SBpath';
-SB.GRID3_UNIT = 'm';
-
-
-switch freqmode
-  
-  case 13
-    %
-    SB.GRID1 = [ 556.5 557 557.5 ]*1e9;  
-    SB.GRID2 = [270 290];    
-    SB.GRID3 = NaN;    
-    %
-    SB.DATA  = zeros( length(SB.GRID1), length(SB.GRID2), length(SB.GRID3) );
-    %
-    SB.DATA(:,1,1) = [ 0.04 0.02 0.01 ];
-    SB.DATA(:,2,1) = [ 0.04 0.02 0.01 ];
-    
-  otherwise
-    error( 'There are no detailed sideband settings for fmode %d.', freqmode );
-
-end
-return

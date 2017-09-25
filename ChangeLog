@@ -1,3 +1,9 @@
+2017-09-25  Patrick Eriksson  <patrick.eriksson@chalmers.se>
+
+	* Settings/q_fields.rst: Updated description of SIDEBAND_LEAKAGE.
+
+	* Settings/q_meso.m: Removed sideband_settings sub-function. Not used.
+
 2017-08-29  Bengt Rydberg  <bengt.rydberg@molflow.com>
 
         * Build_scripts/build.sh: added argument handling of docker build
