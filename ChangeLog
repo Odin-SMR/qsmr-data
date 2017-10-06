@@ -1,3 +1,7 @@
+2017-10-06  Andreas Skyman  <andreas.skyman@molflow.com>
+
+	* Settings/q_stnd.m: Activated sideband model for fmode 1.
+
 2017-09-25  Patrick Eriksson  <patrick.eriksson@chalmers.se>
 
 	* Settings/q_fields.rst: Updated description of SIDEBAND_LEAKAGE.
@@ -6,12 +10,12 @@
 
 2017-08-29  Bengt Rydberg  <bengt.rydberg@molflow.com>
 
-        * Build_scripts/build.sh: added argument handling of docker build
-        script
+	* Build_scripts/build.sh: added argument handling of docker build
+	script
 
 2017-03-23  Patrick Eriksson  <patrick.eriksson@chalmers.se>
 
-	* Build_scripts/docler/build_data_artifact.sh: Added missing mkdir.
+	* Build_scripts/docker/build_data_artifact.sh: Added missing mkdir.
 
 2017-03-23  Patrick Eriksson  <patrick.eriksson@chalmers.se>
 

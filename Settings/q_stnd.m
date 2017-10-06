@@ -9,7 +9,7 @@
 %
 % FORMAT   Q = q_stnd(freqmode)
 %
-% OUT   Q          A Q-structure (lacking path and version settings) 
+% OUT   Q          A Q-structure (lacking path and version settings)
 %  IN   freqmode   Frequency mode number
 
 
@@ -20,7 +20,7 @@ function Q = q_stnd(freqmode)
 %--- Frequency and inversion modes
 %---------------------------------------------------------------------------
 
-Q.FREQMODE           = freqmode;  
+Q.FREQMODE           = freqmode;
 Q.INVEMODE           = 'stnd';
 
 
@@ -31,8 +31,8 @@ Q.INVEMODE           = 'stnd';
 Q.F_GRID_NFILL       = 0;
 Q.ABS_P_INTERP_ORDER = 1;
 Q.ABS_T_INTERP_ORDER = 3;
-  
-  
+
+
 %---------------------------------------------------------------------------
 %--- RT and sensor
 %---------------------------------------------------------------------------
@@ -93,7 +93,7 @@ Q.T.LIMITS           = [100 350];
 
 Q.QFILT_TSPILL       = true;
 Q.QFILT_TREC         = true;
-Q.QFILT_NOISE        = true;  
+Q.QFILT_NOISE        = true;
 Q.QFILT_SCANNING     = true;
 Q.QFILT_SPECTRA      = true;
 Q.QFILT_TBRANGE      = true;
@@ -114,15 +114,15 @@ Q.MIN_N_FREQS        = 200;
 %---------------------------------------------------------------------------
 
 switch freqmode
-  
+
  case 1
   %
   Q.BACKEND_NR               = 2;
   Q.FRONTEND_NR              = 2;
   Q.F_LO_NOMINAL             = 497.885e9;
-  Q.SIDEBAND_LEAKAGE         = 0.02;
+  Q.SIDEBAND_LEAKAGE         = 'model';
   %
-  Q.P_GRID                   = q2_pgrid( [], 70e3 ); 
+  Q.P_GRID                   = q2_pgrid( [], 70e3 );
   %
   Q.F_RANGES                 = [ 501.16e9 501.60e9; 501.96e9 502.40e9 ];
   Q.ZTAN_LIMIT_TOP           = 60e3;
@@ -208,11 +208,11 @@ switch freqmode
   Q.ABS_SPECIES(11).TAG{1}   = 'H2O2-*-498e9-505e9';
   Q.ABS_SPECIES(11).RETRIEVE = false;
   %
-  [Q.ABS_SPECIES.ISOFAC]     = deal( 1 );  
+  [Q.ABS_SPECIES.ISOFAC]     = deal( 1 );
   [Q.ABS_SPECIES.SOURCE]     = deal( 'Bdx' );
   %-------------------------------------------------------------------------
 
-    
+
  case 2
   %
   Q.BACKEND_NR               = 1;
@@ -220,13 +220,13 @@ switch freqmode
   Q.F_LO_NOMINAL             = 548.500e9;
   Q.SIDEBAND_LEAKAGE         = 0.05;
   %
-  Q.P_GRID                   = q2_pgrid( [], 120e3 ); 
+  Q.P_GRID                   = q2_pgrid( [], 120e3 );
   %
   Q.F_RANGES                 = [544.3e9 544.9e9];
   Q.ZTAN_LIMIT_TOP           = 100e3;
   Q.ZTAN_MIN_RANGE           = [ 25e3 40e3 ];
   %
-  Q.T.L2                     = true; 
+  Q.T.L2                     = true;
   Q.T.L2NAME                 = 'Temperature / 545 GHz / 15 to 65 km';
   Q.T.GRID                   = q2_pgrid( 10e3, 100e3, 4 );
   %
@@ -275,7 +275,7 @@ switch freqmode
   Q.ABS_SPECIES(4).CORRLEN   = 10e3;
   Q.ABS_SPECIES(4).LOG_ON    = false;
   Q.ABS_SPECIES(4).ISOFAC    = 1;
-  %  
+  %
   Q.ABS_SPECIES(5).TAG{1}    = 'N2-SelfContMPM93';
   Q.ABS_SPECIES(5).RETRIEVE  = false;
   %
@@ -293,8 +293,8 @@ switch freqmode
   %
   [Q.ABS_SPECIES.SOURCE]     = deal( 'Bdx' );
   %-------------------------------------------------------------------------
-  
-  
+
+
  otherwise
   error( 'Frequency band %d is not yet handled.', freqmode );
 end

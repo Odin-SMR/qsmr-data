@@ -91,7 +91,7 @@ Q.T.LIMITS           = [100 350];
 
 Q.QFILT_TSPILL       = true;
 Q.QFILT_TREC         = true;
-Q.QFILT_NOISE        = true; 
+Q.QFILT_NOISE        = true;
 Q.QFILT_SCANNING     = true;
 Q.QFILT_SPECTRA      = true;
 Q.QFILT_TBRANGE      = true;
@@ -120,11 +120,11 @@ switch freqmode
   Q.F_LO_NOMINAL             = 553.300e9;
   %
   Q.SIDEBAND_LEAKAGE         = 0.05;
-  % 
+  %
   Q.GA_START                 = 1000;
   Q.GA_FACTOR_OK             = sqrt(10);
   %
-  Q.P_GRID                   = q2_pgrid( [], 150e3 ); 
+  Q.P_GRID                   = q2_pgrid( [], 150e3 );
   %
   Q.F_RANGES                 = [ 556.6e9 557.2e9; ];
   Q.ZTAN_LIMIT_TOP           = 150e3;
@@ -155,10 +155,10 @@ switch freqmode
   Q.ABS_SPECIES(2).CORRLEN   = 10e3;
   Q.ABS_SPECIES(2).LOG_ON    = false;
   %
-  [Q.ABS_SPECIES.ISOFAC]     = deal( 1 );  
+  [Q.ABS_SPECIES.ISOFAC]     = deal( 1 );
   [Q.ABS_SPECIES.SOURCE]     = deal( 'Bdx' );
   %-------------------------------------------------------------------------
-  
+
  case 14
   %
   Q.BACKEND_NR               = 2;
@@ -209,12 +209,12 @@ switch freqmode
   Q.BACKEND_NR               = 1;
   Q.FRONTEND_NR              = 4;
   Q.F_LO_NOMINAL             = 553.05e9;
-  Q.SIDEBAND_LEAKAGE         = 0.05; 
-  % 
+  Q.SIDEBAND_LEAKAGE         = 0.05;
+  %
   Q.GA_START                 = 1000;
   Q.GA_FACTOR_OK             = sqrt(10);
   %
-  Q.P_GRID                   = q2_pgrid( [], 150e3 ); 
+  Q.P_GRID                   = q2_pgrid( [], 150e3 );
   %
   Q.F_RANGES                 = [ 556.6e9 557.2e9; ];
   Q.ZTAN_LIMIT_TOP           = 150e3;
@@ -245,11 +245,11 @@ switch freqmode
   Q.ABS_SPECIES(2).CORRLEN   = 10e3;
   Q.ABS_SPECIES(2).LOG_ON    = false;
   %
-  [Q.ABS_SPECIES.ISOFAC]     = deal( 1 );  
+  [Q.ABS_SPECIES.ISOFAC]     = deal( 1 );
   [Q.ABS_SPECIES.SOURCE]     = deal( 'Bdx' );
   %-------------------------------------------------------------------------
-  
-  
+
+
  case 21
   %
   Q.BACKEND_NR               = 1;
@@ -257,7 +257,7 @@ switch freqmode
   Q.F_LO_NOMINAL             = 547.753e9;
   Q.SIDEBAND_LEAKAGE         = 0.05;
   %
-  Q.P_GRID                   = q2_pgrid( [], 150e3 ); 
+  Q.P_GRID                   = q2_pgrid( [], 150e3 );
   %
   Q.F_RANGES                 = [ 551.13e9 551.58e9; ];
   Q.ZTAN_LIMIT_TOP           = 150e3;
@@ -289,10 +289,10 @@ switch freqmode
   Q.ABS_SPECIES(2).CORRLEN   = 10e3;
   Q.ABS_SPECIES(2).LOG_ON    = false;
   %
-  [Q.ABS_SPECIES.ISOFAC]     = deal( 1 );  
+  [Q.ABS_SPECIES.ISOFAC]     = deal( 1 );
   [Q.ABS_SPECIES.SOURCE]     = deal( 'Bdx' );
   %-------------------------------------------------------------------------
-  
+
  case 22
   %
   Q.BACKEND_NR               = 2;
@@ -336,7 +336,7 @@ switch freqmode
   [Q.ABS_SPECIES.ISOFAC]     = deal( 1 );
   [Q.ABS_SPECIES.SOURCE]     = deal( 'Bdx' );
   %-------------------------------------------------------------------------
-        
+
   case 24
    %
    Q.BACKEND_NR               = 1;
@@ -379,7 +379,7 @@ switch freqmode
    %
    [Q.ABS_SPECIES.ISOFAC]     = deal( 1 );
    [Q.ABS_SPECIES.SOURCE]     = deal( 'Bdx' );
-    
+
  otherwise
   error( 'Frequency band %d is not yet handled.', freqmode );
 end
