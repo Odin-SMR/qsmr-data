@@ -1,3 +1,13 @@
+2017-10-16  Patrick Eriksson  <patrick.eriksson@chalmers.se>
+
+	* Settings/q_stnd.m: Settings added for fmode 8 and 17. Nothing
+	tested yet!!!
+
+	* Mscripts_precalc/q2_precalc_fgrid.m (f_opt):
+	* Mscripts_precalc/q2_precalc_abslookup.m (do_1fmode): Expanded
+	string given to q2_arts to make sure that cfile.rep ends up in
+	workfolder.
+
 2017-10-06  Andreas Skyman  <andreas.skyman@molflow.com>
 
 	* Settings/q_stnd.m: Activated sideband model for fmode 1.
