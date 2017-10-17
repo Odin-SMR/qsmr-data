@@ -1,3 +1,13 @@
+2017-10-17  Patrick Eriksson  <patrick.eriksson@chalmers.se>
+
+	* Fmode 8 and 17 now configured. Some test inversions done, and
+	looked OK.
+
+	* Settings/q_stnd.m (q_stnd): Some changes for fmode 8 and 17.
+
+	* Mscripts_precalc/q2_precalc_antenna.m (calc_in_subfun): Had to
+	allow extrapolation to handle fmode 8.
+
 2017-10-16  Patrick Eriksson  <patrick.eriksson@chalmers.se>
 
 	* Settings/q_stnd.m: Settings added for fmode 8 and 17. Nothing

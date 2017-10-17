@@ -308,7 +308,10 @@ switch freqmode
   Q.ZTAN_LIMIT_TOP           = 90e3;
   Q.ZTAN_MIN_RANGE           = [ 30e3 55e3 ];
   %
+  Q.GA_START                 = 90;
+  %
   Q.T.L2                     = false;
+  Q.T.GRID                   = q2_pgrid( 10e3, 100e3, 4 );
   %
   Q.ABS_SPECIES(1).TAG{1}    = 'H2O-161-488.3e9-489.4e9';
   Q.ABS_SPECIES(1).RETRIEVE  = true;
@@ -317,7 +320,7 @@ switch freqmode
   Q.ABS_SPECIES(1).GRID      = q2_pgrid( 10e3, 95e3, 8 );
   Q.ABS_SPECIES(1).UNC_REL   = 0.5;
   Q.ABS_SPECIES(1).UNC_ABS   = 1e-6;
-  Q.ABS_SPECIES(1).CORRLEN   = 5e3;
+  Q.ABS_SPECIES(1).CORRLEN   = 10e3;
   Q.ABS_SPECIES(1).LOG_ON    = false;
   Q.ABS_SPECIES(1).ISOFAC    = 1;
   %
@@ -328,7 +331,7 @@ switch freqmode
   Q.ABS_SPECIES(2).GRID      = q2_pgrid( 10e3, 95e3, 4 );
   Q.ABS_SPECIES(2).UNC_REL   = 0.5;
   Q.ABS_SPECIES(2).UNC_ABS   = 1e-6;
-  Q.ABS_SPECIES(2).CORRLEN   = 5e3;
+  Q.ABS_SPECIES(2).CORRLEN   = 10e3;
   Q.ABS_SPECIES(2).LOG_ON    = false;
   Q.ABS_SPECIES(2).ISOFAC    = 1.99983E-03;
   %
@@ -341,7 +344,7 @@ switch freqmode
   Q.ABS_SPECIES(3).L2NAME    = 'H2O-dummy / 488 GHz';
   Q.ABS_SPECIES(3).UNC_REL   = 0.5;
   Q.ABS_SPECIES(3).UNC_ABS   = 1e-6;
-  Q.ABS_SPECIES(3).CORRLEN   = 5e3;
+  Q.ABS_SPECIES(3).CORRLEN   = 10e3;
   Q.ABS_SPECIES(3).LOG_ON    = true;
   Q.ABS_SPECIES(3).ISOFAC    = 1;
   %
@@ -352,20 +355,20 @@ switch freqmode
   Q.ABS_SPECIES(4).L2NAME    = 'O3 / 488 GHz / 20 to 60 km';
   Q.ABS_SPECIES(4).UNC_REL   = 0.5;
   Q.ABS_SPECIES(4).UNC_ABS   = 1e-6;
-  Q.ABS_SPECIES(4).CORRLEN   = 5e3;
+  Q.ABS_SPECIES(4).CORRLEN   = 10e3;
   Q.ABS_SPECIES(4).LOG_ON    = false;
   Q.ABS_SPECIES(4).ISOFAC    = 1;
   %
   Q.ABS_SPECIES(5).TAG{1}    = 'CH3Cl';
-  Q.ABS_SPECIES(5).RETRIEVE  = true;
-  Q.ABS_SPECIES(5).L2        = false;
-  Q.ABS_SPECIES(5).GRID      = q2_pgrid( 10e3, 40e3, 4 );
-  Q.ABS_SPECIES(5).L2NAME    = 'CH3Cl / 488 GHz / 20 to 30 km';
-  Q.ABS_SPECIES(5).UNC_REL   = 0.5;
-  Q.ABS_SPECIES(5).UNC_ABS   = 1e-10;
-  Q.ABS_SPECIES(5).CORRLEN   = 5e3;
-  Q.ABS_SPECIES(5).LOG_ON    = true;
-  Q.ABS_SPECIES(5).ISOFAC    = 1;
+  Q.ABS_SPECIES(5).RETRIEVE  = false;
+  %Q.ABS_SPECIES(5).L2        = true;
+  %Q.ABS_SPECIES(5).GRID      = q2_pgrid( 10e3, 40e3, 4 );
+  %Q.ABS_SPECIES(5).L2NAME    = 'CH3Cl / 488 GHz / 20 to 30 km';
+  %Q.ABS_SPECIES(5).UNC_REL   = 0.5;
+  %Q.ABS_SPECIES(5).UNC_ABS   = 1e-10;
+  %Q.ABS_SPECIES(5).CORRLEN   = 5e3;
+  %Q.ABS_SPECIES(5).LOG_ON    = true;
+  %Q.ABS_SPECIES(5).ISOFAC    = 1;
   %
   Q.ABS_SPECIES(6).TAG{1}    = 'N2-SelfContMPM93';
   Q.ABS_SPECIES(6).RETRIEVE  = false;
@@ -399,16 +402,19 @@ switch freqmode
   Q.ZTAN_LIMIT_TOP           = 90e3;
   Q.ZTAN_MIN_RANGE           = [ 30e3 55e3 ];
   %
-  Q.T.L2                     = false;
+  Q.GA_START                 = 90;
   %
-  Q.ABS_SPECIES(1).TAG{1}    = 'H2O-162-489.9e9-490.8.4e9';
+  Q.T.L2                     = false;
+  Q.T.GRID                   = q2_pgrid( 10e3, 100e3, 4 );
+  %
+  Q.ABS_SPECIES(1).TAG{1}    = 'H2O-162-489.9e9-490.8e9';
   Q.ABS_SPECIES(1).RETRIEVE  = true;
   Q.ABS_SPECIES(1).L2        = true;
   Q.ABS_SPECIES(1).L2NAME    = 'HDO / 489 GHz / 20 to 60 km';
   Q.ABS_SPECIES(1).GRID      = q2_pgrid( 10e3, 95e3, 4 );
   Q.ABS_SPECIES(1).UNC_REL   = 0.5;
   Q.ABS_SPECIES(1).UNC_ABS   = 1e-6;
-  Q.ABS_SPECIES(1).CORRLEN   = 5e3;
+  Q.ABS_SPECIES(1).CORRLEN   = 10e3;
   Q.ABS_SPECIES(1).LOG_ON    = false;
   Q.ABS_SPECIES(1).ISOFAC    = 3.10693E-04;
   %
@@ -421,7 +427,7 @@ switch freqmode
   Q.ABS_SPECIES(2).L2NAME    = 'H2O-dummy / 489 GHz';
   Q.ABS_SPECIES(2).UNC_REL   = 0.5;
   Q.ABS_SPECIES(2).UNC_ABS   = 1e-6;
-  Q.ABS_SPECIES(2).CORRLEN   = 5e3;
+  Q.ABS_SPECIES(2).CORRLEN   = 10e3;
   Q.ABS_SPECIES(2).LOG_ON    = true;
   Q.ABS_SPECIES(2).ISOFAC    = 1;
   %
@@ -432,7 +438,7 @@ switch freqmode
   Q.ABS_SPECIES(3).GRID      = q2_pgrid( 10e3, 95e3, 4 );
   Q.ABS_SPECIES(3).UNC_REL   = 0.5;
   Q.ABS_SPECIES(3).UNC_ABS   = 1e-6;
-  Q.ABS_SPECIES(3).CORRLEN   = 5e3;
+  Q.ABS_SPECIES(3).CORRLEN   = 10e3;
   Q.ABS_SPECIES(3).LOG_ON    = false;
   Q.ABS_SPECIES(3).ISOFAC    = 3.98194E-03;
   %
@@ -443,7 +449,7 @@ switch freqmode
   Q.ABS_SPECIES(4).GRID      = q2_pgrid( 10e3, 95e3, 4 );
   Q.ABS_SPECIES(4).UNC_REL   = 0.5;
   Q.ABS_SPECIES(4).UNC_ABS   = 1e-6;
-  Q.ABS_SPECIES(4).CORRLEN   = 5e3;
+  Q.ABS_SPECIES(4).CORRLEN   = 10e3;
   Q.ABS_SPECIES(4).LOG_ON    = false;
   Q.ABS_SPECIES(4).ISOFAC    = 1.99097E-03;
   %
@@ -454,7 +460,7 @@ switch freqmode
   Q.ABS_SPECIES(5).GRID      = q2_pgrid( 10e3, 95e3, 4 );
   Q.ABS_SPECIES(5).UNC_REL   = 0.5;
   Q.ABS_SPECIES(5).UNC_ABS   = 1e-6;
-  Q.ABS_SPECIES(5).CORRLEN   = 5e3;
+  Q.ABS_SPECIES(5).CORRLEN   = 10e3;
   Q.ABS_SPECIES(5).LOG_ON    = false;
   Q.ABS_SPECIES(5).ISOFAC    = 7.40475E-04;
   %
@@ -465,7 +471,7 @@ switch freqmode
   Q.ABS_SPECIES(6).L2NAME    = 'O3-dummy / 489 GHz';
   Q.ABS_SPECIES(6).UNC_REL   = 0.5;
   Q.ABS_SPECIES(6).UNC_ABS   = 1e-6;
-  Q.ABS_SPECIES(6).CORRLEN   = 5e3;
+  Q.ABS_SPECIES(6).CORRLEN   = 10e3;
   Q.ABS_SPECIES(6).LOG_ON    = true;
   Q.ABS_SPECIES(6).ISOFAC    = 1;
   %
@@ -483,7 +489,8 @@ switch freqmode
   %
   Q.ABS_SPECIES(11).TAG{1}   = 'H2O2-*-484e9-494e9';
   Q.ABS_SPECIES(11).RETRIEVE = false;
-  
+  %
+  [Q.ABS_SPECIES.SOURCE]     = deal( 'Bdx' );  
   %-------------------------------------------------------------------------
   
 

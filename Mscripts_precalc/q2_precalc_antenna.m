@@ -100,10 +100,6 @@ return
 
 function G = calc_in_subfun( flab, dza_in, D, f0, tint )
 
-  if f0 < flab(1) | f0 > flab(end)
-    error( 'No extrapolation in frequency allowed.' );
-  end
-  
   %- Scanning speed is 750 m/s. Convert to an approximate angle.
   %
   R  = earth_radius;
@@ -119,7 +115,7 @@ function G = calc_in_subfun( flab, dza_in, D, f0, tint )
   
   %- Make frequency interpolation
   %
-  r = interp1( flab, D', f0, 'linear' )';
+  r = interp1( flab, D', f0, 'linear', 'extrap' )';
 
   %- Include scanning by simply adding antenna pattern for each dza
   %
