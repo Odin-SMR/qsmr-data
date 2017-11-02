@@ -121,6 +121,7 @@ switch freqmode
   Q.FRONTEND_NR              = 2;
   Q.F_LO_NOMINAL             = 497.885e9;
   Q.SIDEBAND_LEAKAGE         = 'model';
+  Q.BASELINE.MODEL           = 'module'; % Added 2017-11-02 for testing
   %
   Q.P_GRID                   = q2_pgrid( [], 70e3 );
   %
@@ -218,7 +219,8 @@ switch freqmode
   Q.BACKEND_NR               = 1;
   Q.FRONTEND_NR              = 4;
   Q.F_LO_NOMINAL             = 548.500e9;
-  Q.SIDEBAND_LEAKAGE         = 0.05;
+  %Q.SIDEBAND_LEAKAGE         = 0.05;   % Used for VDS-STD6
+  Q.SIDEBAND_LEAKAGE         = 'model'; % So far just for testing
   %
   Q.P_GRID                   = q2_pgrid( [], 120e3 );
   %
