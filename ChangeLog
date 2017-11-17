@@ -1,8 +1,12 @@
+2017-11-17  Andreas Skyman  <andreas.skyman@molflow.com>
+
+	* Settings/q_meso.m: Activated sideband model for fmode 13 (meso).
+
 2017-11-02  Patrick Eriksson  <patrick.eriksson@chalmers.se>
 
 	* Settings/q_stnd.m: Some changes for making tests.
 	Fmode 1:  Q.BASELINE.MODEL           = 'module';
-	Fmode 2:  Q.SIDEBAND_LEAKAGE         = 'model'; 
+	Fmode 2:  Q.SIDEBAND_LEAKAGE         = 'model';
 
 2017-10-17  Patrick Eriksson  <patrick.eriksson@chalmers.se>
 
