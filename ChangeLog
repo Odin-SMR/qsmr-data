@@ -1,3 +1,7 @@
+2017-12-13  Andreas Skyman  <andreas.skyman@molflow.com>
+
+	* Settings/q_meso.m: Activated sideband model for fmode 19 (meso).
+
 2017-11-17  Andreas Skyman  <andreas.skyman@molflow.com>
 
 	* Settings/q_meso.m: Activated sideband model for fmode 13 (meso).

@@ -209,7 +209,7 @@ switch freqmode
   Q.BACKEND_NR               = 1;
   Q.FRONTEND_NR              = 4;
   Q.F_LO_NOMINAL             = 553.05e9;
-  Q.SIDEBAND_LEAKAGE         = 0.05;
+  Q.SIDEBAND_LEAKAGE         = 'model'; % So far just for testing
   %
   Q.GA_START                 = 1000;
   Q.GA_FACTOR_OK             = sqrt(10);
