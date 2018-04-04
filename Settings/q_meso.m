@@ -164,6 +164,7 @@ switch freqmode
   Q.BACKEND_NR               = 2;
   Q.FRONTEND_NR              = 3;
   Q.F_LO_NOMINAL             = 572.762e9;
+  Q.LO_COMMON                = false;
   Q.SIDEBAND_LEAKAGE         = 0.05;
   %
   Q.GA_START                 = 100;
@@ -298,6 +299,7 @@ switch freqmode
   Q.BACKEND_NR               = 2;
   Q.FRONTEND_NR              = 3;
   Q.F_LO_NOMINAL             = 572.964e9;
+  Q.LO_COMMON                = false;
   Q.SIDEBAND_LEAKAGE         = 0.05;
   %
   Q.GA_START                 = 100;
@@ -342,6 +344,7 @@ switch freqmode
    Q.BACKEND_NR               = 1;
    Q.FRONTEND_NR              = 3;
    Q.F_LO_NOMINAL             = 572.762e9;
+   Q.LO_COMMON                = false;
    Q.SIDEBAND_LEAKAGE         = 0.05;
    %
    Q.GA_START                 = 100;

@@ -1,6 +1,10 @@
 2018-04-04  Patrick Eriksson  <patrick.eriksson@chalmers.se>
 
-	*DataPrecalced/Fgrid/Meso: New frequency grids for 14, 22 and 24
+	* Settings/q_meso.m: Q.LO_COMMON set to false for fmode 14, 22 and 24.
+
+2018-04-04  Patrick Eriksson  <patrick.eriksson@chalmers.se>
+
+	* DataPrecalced/Fgrid/Meso: New frequency grids for 14, 22 and 24
 	generated. These should handle varying LO better. Deviations from
 	nominal value up to 1 GHz should now be OK.
 
