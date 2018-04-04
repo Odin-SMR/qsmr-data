@@ -3,16 +3,21 @@
 %    Note that the pre-calculations use settings in both P and Q. See
 %    comments (and code) in the pre-calculation functions.
 %
-% FORMAT P = p_std( [meso] )
+% FORMAT P = p_std( [is_meso,co_mode] )
 %
-% OUT  P     Pre-calculation settings
-% OPT  meso  Boolean to select settings dedicated for mesopsheric
-%            retrievals. Default is false.
+% OUT  P         Pre-calculation settings
+% OPT  is_meso   Boolean to select settings dedicated for mesopsheric
+%                retrievals. Default is false.
+%      co_mode   Boolean to select settings dedicated for CO-modes.
+%                Default is false.
 
-function P = p_stnd( meso )
+function P = p_stnd( is_meso, co_mode )
 %
-if nargin == 0
-  meso = false;
+if nargin < 1
+  is_meso = false;
+end
+if nargin < 2
+  co_mode = false;
 end
 
   
@@ -57,10 +62,10 @@ P.REFSPECTRA_LON    = repmat( 0, size(P.REFSPECTRA_LAT) );
 P.REFSPECTRA_MJD    = repmat( date2mjd(2000,1,1)+34, size(P.REFSPECTRA_LAT) );
 
 % A set of tangent altitudes, considered when generating frequency grids.
-if ~meso
-  P.REFSPECTRA_ZTAN   = 15e3 : 5e3 : 90e3; 
-else
+if is_meso
   P.REFSPECTRA_ZTAN   = 45e3 : 5e3 : 105e3;     
+else
+  P.REFSPECTRA_ZTAN   = 15e3 : 5e3 : 90e3; 
 end
 
 
@@ -71,9 +76,15 @@ end
 % Frequency spacing of reference spectra
 P.FGRID_TEST_DF     = 100e3;
 
-% How much frequency margin to add, to both primary and image band
-P.FGRID_EDGE_MARGIN = 20e6;
+% How much frequency margin to add, primary band
+P.FGRID_MARGIN_PRIMARY = 20e6;
 
+% How much frequency margin to add, image band
+if co_mode
+  P.FGRID_MARGIN_IMAGE = 1e9;
+else
+  P.FGRID_MARGIN_IMAGE = P.FGRID_MARGIN_PRIMARY;
+end
 
 
 %-------------------------------------------------------------------------------
@@ -92,9 +103,4 @@ P.PARTITION_FILE = fullfile( inputfolder, 'tips.xml' );
 P.SPECTRO_FILE  = fullfile( inputfolder, 'smr_linedata.xml' );
 
 % The set of temperature perturbations
-%
-% The mimimum value of the lookup table reference temperature is about 180
-% K, and the reference temperature is not allowed to go above 300 K. You 
-% should adopt ABS_T_PERT accordingly.
-%
-P.ABS_T_PERT    = [ symgrid( [0:10:100 120 160] ), 220 300 400 600 900 ]';
+P.ABS_T_PERT    = [ symgrid( [0:10:70 100] ), 130 160 220 300 400 600 900 ]';

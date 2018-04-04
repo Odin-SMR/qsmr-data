@@ -1,3 +1,19 @@
+2018-04-04  Patrick Eriksson  <patrick.eriksson@chalmers.se>
+
+	*DataPrecalced/Fgrid/Meso: New frequency grids for 14, 22 and 24
+	generated. These should handle varying LO better. Deviations from
+	nominal value up to 1 GHz should now be OK.
+
+	* Mscripts_precalc/q2_precalc_fgrid.m: Changed to use
+	P.FGRID_MARGIN_PRIMARY and P.FGRID_MARGIN_IMAGE.
+
+	* Settings/p_stnd.m: P.FGRID_EDGE_MARGIN now splitted into two
+	parts, P.FGRID_MARGIN_PRIMARY and P.FGRID_MARGIN_IMAGE. This was
+	necessary to handle CO-data with high deviations to nominal LO
+	frequency. The function now takes two optional inputs. So far only
+	relevant for generation of frequency grids.
+	P.ABS_T_PERT somewhat modified.
+
 2017-12-13  Andreas Skyman  <andreas.skyman@molflow.com>
 
 	* Settings/q_meso.m: Activated sideband model for fmode 19 (meso).

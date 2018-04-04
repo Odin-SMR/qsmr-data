@@ -123,13 +123,14 @@ function f_opt = do_1fmode( Q, P, workfolder, precs, do_cubic );
   end
   %
   for i = 1 : size( Q.F_RANGES, 1 )
-    % Part of main band
-    frange = Q.F_RANGES(i,:) + [ -P.FGRID_EDGE_MARGIN, P.FGRID_EDGE_MARGIN ];
+    % Part inside primary band
+    frange = Q.F_RANGES(i,:) + P.FGRID_MARGIN_PRIMARY*[-1,1];
     fpart  = do_1range( Q, P, workfolder, frange, precs, do_cubic );
     for j = 1 : length( precs )
       f_opt{j} = [ f_opt{j}; fpart{j} ];
     end
     % Corresponding part in side band
+    frange = Q.F_RANGES(i,:) + P.FGRID_MARGIN_IMAGE*[-1,1];
     frange = sort( 2*Q.F_LO_NOMINAL - frange );
     fpart  = do_1range( Q, P, workfolder, frange, 20*precs, do_cubic );
     for j = 1 : length( precs )
