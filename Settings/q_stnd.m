@@ -78,6 +78,7 @@ Q.POINTING.RETRIEVE  = true;
 Q.POINTING.UNC       = 0.01;
 
 Q.FREQUENCY.RETRIEVE = true;
+Q.FREQUENCY.NPOLY    = 0;
 Q.FREQUENCY.UNC      = 1e6;
 
 Q.T.SOURCE           = 'WebApi';

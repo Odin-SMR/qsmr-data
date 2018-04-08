@@ -76,6 +76,7 @@ Q.POINTING.RETRIEVE  = true;
 Q.POINTING.UNC       = 0.01;
 
 Q.FREQUENCY.RETRIEVE = true;
+Q.FREQUENCY.NPOLY    = 0;
 Q.FREQUENCY.UNC      = 1e6;
 
 Q.T.SOURCE           = 'WebApi';
@@ -165,6 +166,7 @@ switch freqmode
   Q.FRONTEND_NR              = 3;
   Q.F_LO_NOMINAL             = 572.762e9;
   Q.LO_COMMON                = false;
+  Q.FREQUENCY.NPOLY          = -1;
   Q.SIDEBAND_LEAKAGE         = 0.05;
   %
   Q.GA_START                 = 100;
@@ -300,6 +302,7 @@ switch freqmode
   Q.FRONTEND_NR              = 3;
   Q.F_LO_NOMINAL             = 572.964e9;
   Q.LO_COMMON                = false;
+  Q.FREQUENCY.NPOLY          = -1;
   Q.SIDEBAND_LEAKAGE         = 0.05;
   %
   Q.GA_START                 = 100;
@@ -345,6 +348,7 @@ switch freqmode
    Q.FRONTEND_NR              = 3;
    Q.F_LO_NOMINAL             = 572.762e9;
    Q.LO_COMMON                = false;
+   Q.FREQUENCY.NPOLY          = -1;
    Q.SIDEBAND_LEAKAGE         = 0.05;
    %
    Q.GA_START                 = 100;

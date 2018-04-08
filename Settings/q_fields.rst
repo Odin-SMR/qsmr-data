@@ -141,7 +141,13 @@ FREQMODE
 FREQUENCY 
    A structure. Definition of frequency off-set retrieval. The fields of the
    structure are as follows. RETRIEVE: A boolean, flagging if frequency off-set
-   shall be retrieved or not. UNC: A priori uncertainty (1 std dev).
+   shall be retrieved or not. UNC: A priori uncertainty (1 std dev). NPOLY: The
+   polynomial order to apply for frequency fit. For example, 0 means that a
+   constant off-set is retrived and 1 means that the varies is assumed to vary
+   linearly with zenith angle. The value -1 has a special meaning. With -1, an
+   off-set for each tangent altitude is retrieved. The a priori uncertainty is
+   set to following UNC for all polynomial coefficients, or for each off-set
+   of NPOLY is -1.
 
 FRONTEND_NR
    An integer. Index of expected frontend. Index coding described in L1B ATBD.
