@@ -169,15 +169,17 @@ switch freqmode
   Q.FREQUENCY.NPOLY          = -1;
   Q.SIDEBAND_LEAKAGE         = 0.05;
   %
-  Q.GA_START                 = 100;
+  %Q.GA_START                 = 100;
   %
   Q.P_GRID                   = q2_pgrid( [], 140e3 );
   %
   Q.F_RANGES                 = [ 576.118e9 576.418e9 ];
-  Q.ZTAN_LIMIT_TOP           = 140e3;
+  %Q.F_RANGES                 = [ 576.168e9 576.615e9 ];
+  Q.ZTAN_LIMIT_TOP           = 100e3;
   Q.ZTAN_LIMIT_BOT           = [ 40e3 40e3 40e3 40e3 ];
   Q.ZTAN_MIN_RANGE           = [ 65e3 80e3 ];
   %
+  Q.T.RETRIEVE               = false;
   Q.T.L2                     = true;
   Q.T.L2NAME                 = 'Temperature - 576 GHz';
   Q.T.GRID                   = q2_pgrid( 40e3, 140e3, 4 );
@@ -305,15 +307,17 @@ switch freqmode
   Q.FREQUENCY.NPOLY          = -1;
   Q.SIDEBAND_LEAKAGE         = 0.05;
   %
-  Q.GA_START                 = 100;
+  %Q.GA_START                 = 100;
   %
   Q.P_GRID                   = q2_pgrid( [], 140e3 );
   %
   Q.F_RANGES                 = [ 576.118e9 576.418e9 ];
-  Q.ZTAN_LIMIT_TOP           = 140e3;
+ %Q.F_RANGES                 = [ 576.168e9 576.615e9 ];
+  Q.ZTAN_LIMIT_TOP           = 100e3;
   Q.ZTAN_LIMIT_BOT           = [ 40e3 40e3 40e3 40e3 ];
   Q.ZTAN_MIN_RANGE           = [ 65e3 80e3 ];
   %
+  Q.T.RETRIEVE               = false;
   Q.T.L2                     = true;
   Q.T.L2NAME                 = 'Temperature - 576 GHz';
   Q.T.GRID                   = q2_pgrid( 40e3, 140e3, 4 );
@@ -351,15 +355,17 @@ switch freqmode
    Q.FREQUENCY.NPOLY          = -1;
    Q.SIDEBAND_LEAKAGE         = 0.05;
    %
-   Q.GA_START                 = 100;
+   %Q.GA_START                 = 100;
    %
    Q.P_GRID                   = q2_pgrid( [], 140e3 );
    %
    Q.F_RANGES                 = [ 576.118e9 576.418e9 ];
-   Q.ZTAN_LIMIT_TOP           = 140e3;
+   %Q.F_RANGES                 = [ 576.168e9 576.615e9 ];
+   Q.ZTAN_LIMIT_TOP           = 100e3;
    Q.ZTAN_LIMIT_BOT           = [ 40e3 40e3 40e3 40e3 ];
    Q.ZTAN_MIN_RANGE           = [ 65e3 80e3 ];
    %
+   Q.T.RETRIEVE               = false;
    Q.T.L2                     = true;
    Q.T.L2NAME                 = 'Temperature - 576 GHz';
    Q.T.GRID                   = q2_pgrid( 40e3, 140e3, 4 );
@@ -377,7 +383,7 @@ switch freqmode
    Q.ABS_SPECIES(2).TAG{1}    = 'O3-*-575e9-578e9';
    Q.ABS_SPECIES(2).RETRIEVE  = false;
    Q.ABS_SPECIES(2).L2        = true;
-   Q.ABS_SPECIES(2).GRID      = q2_pgrid( 40e3, 110e3, 4 );
+   Q.ABS_SPECIES(2).GRID      = q2_pgrid( 40e3, 120e3, 4 );
    Q.ABS_SPECIES(2).L2NAME    = 'O3 - 576 GHz';
    Q.ABS_SPECIES(2).UNC_REL   = 0.5;
    Q.ABS_SPECIES(2).UNC_ABS   = 1e-6;

@@ -1,3 +1,9 @@
+2018-04-18  Francesco Grieco  <francesco.grieco@chalmers.se>
+	* Settings/q_meso.m: Changed Q.ZTAN_LIMIT_TOP to 100e3 m for FM 14,
+	 22 and 24. Spectra for altitudes higher than this value consist of 
+	just noise.
+	Changed Q.GA_START to 10 for FM 14, 22, 24.
+
 2018-04-10  Francesco Grieco  <francesco.grieco@chalmers.se>
 	* Settings/q_meso.m: Changed altitudes from 150e3 to 140e3 m 
 	in settings of grids. 150e3 causes errors related to not strictly 
