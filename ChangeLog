@@ -1,3 +1,7 @@
+2018-04-06  Patrick Eriksson  <patrick.eriksson@chalmers.se>
+
+	* Settings/q_fields.pdf: Updated and made part of repository.
+
 2018-04-18  Francesco Grieco  <francesco.grieco@chalmers.se>
 	* Settings/q_meso.m: Changed Q.ZTAN_LIMIT_TOP to 100e3 m for FM 14,
 	 22 and 24. Spectra for altitudes higher than this value consist of 
