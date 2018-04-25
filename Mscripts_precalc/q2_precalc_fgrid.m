@@ -138,8 +138,10 @@ function f_opt = do_1fmode( Q, P, workfolder, precs, do_cubic );
     end
   end
   %
+  % Use unique below (and not sort) as frequencies can be duplicated if 
+  % Q.F_RANGES has several rows.
   for j = 1 : length( precs )
-    f_opt{j} = sort( f_opt{j} );
+    f_opt{j} = unique( f_opt{j} );
   end
   %
 return

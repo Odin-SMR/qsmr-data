@@ -83,7 +83,9 @@ P.FGRID_MARGIN_PRIMARY = 20e6;
 if co_mode
   P.FGRID_MARGIN_IMAGE = 1e9;
 else
-  P.FGRID_MARGIN_IMAGE = P.FGRID_MARGIN_PRIMARY;
+  % Dont use higher value here then needed, as it will be non-optimal for
+  % fmodes where Q.F_RANGES has several rows.
+  P.FGRID_MARGIN_IMAGE = 75e6;
 end
 
 

@@ -1,7 +1,7 @@
 2018-04-25  Patrick Eriksson  <patrick.eriksson@chalmers.se>
 
-	* Settings/p_stnd.m (p_stnd): P.FGRID_MARGIN_IMAGE now set to 75
-	MHz, instead of 20 MHz.
+	* Settings/p_stnd.m: P.FGRID_MARGIN_IMAGE now set to 75 MHz,
+	instead of 20 MHz.
 
 	* Mscripts_precalc/q2_precalc_fgrid.m (do_1fmode): Replaced sort with
 	unique in last adjusment of f_opt.
