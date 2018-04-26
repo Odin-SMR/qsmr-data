@@ -1,5 +1,16 @@
 2018-04-25  Patrick Eriksson  <patrick.eriksson@chalmers.se>
 
+	* DataPrecalced/Fgrid: Updated frequency grids. All beside the
+	ones for CO-modes, that already were updated. The new frequency
+	grids should be identical for the primary band, but will differ
+	for the sideband. The new grids allow deviations of LO-frequency
+	from the nominal value of 75 MHz. Before this was 20 MHz.
+
+	This should solve the issue reported for fmode 2. At least the
+	example scan provided now runs and converges.
+
+2018-04-25  Patrick Eriksson  <patrick.eriksson@chalmers.se>
+
 	* Settings/p_stnd.m (p_stnd): P.FGRID_MARGIN_IMAGE now set to 75
 	MHz, instead of 20 MHz.
 
