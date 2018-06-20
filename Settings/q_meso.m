@@ -193,6 +193,7 @@ switch freqmode
   Q.ABS_SPECIES(1).UNC_ABS   = 1e-8;
   Q.ABS_SPECIES(1).CORRLEN   = 10e3;
   Q.ABS_SPECIES(1).LOG_ON    = true;
+  Q.ABS_SPECIES(1).SOURCE    = 'MIPAS';
   %
   Q.ABS_SPECIES(2).TAG{1}    = 'O3-*-575e9-578e9';
   Q.ABS_SPECIES(2).RETRIEVE  = false;
@@ -203,9 +204,10 @@ switch freqmode
   Q.ABS_SPECIES(2).UNC_ABS   = 1e-6;
   Q.ABS_SPECIES(2).CORRLEN   = 10e3;
   Q.ABS_SPECIES(2).LOG_ON    = false;
+  Q.ABS_SPECIES(2).SOURCE    = 'Bdx';
   %
   [Q.ABS_SPECIES.ISOFAC]     = deal( 1 );
-  [Q.ABS_SPECIES.SOURCE]     = deal( 'Bdx' );
+  %[Q.ABS_SPECIES.SOURCE]     = deal( 'Bdx' );
   %-------------------------------------------------------------------------
 
 
@@ -331,6 +333,7 @@ switch freqmode
   Q.ABS_SPECIES(1).UNC_ABS   = 1e-8;
   Q.ABS_SPECIES(1).CORRLEN   = 10e3;
   Q.ABS_SPECIES(1).LOG_ON    = true;
+  Q.ABS_SPECIES(1).SOURCE    = 'MIPAS';
   %
   Q.ABS_SPECIES(2).TAG{1}    = 'O3-*-575e9-578e9';
   Q.ABS_SPECIES(2).RETRIEVE  = false;
@@ -341,9 +344,10 @@ switch freqmode
   Q.ABS_SPECIES(2).UNC_ABS   = 1e-6;
   Q.ABS_SPECIES(2).CORRLEN   = 10e3;
   Q.ABS_SPECIES(2).LOG_ON    = false;
+  Q.ABS_SPECIES(2).SOURCE    = 'Bdx';
   %
   [Q.ABS_SPECIES.ISOFAC]     = deal( 1 );
-  [Q.ABS_SPECIES.SOURCE]     = deal( 'Bdx' );
+  %[Q.ABS_SPECIES.SOURCE]     = deal( 'Bdx' );
   %-------------------------------------------------------------------------
 
   case 24
@@ -379,6 +383,7 @@ switch freqmode
    Q.ABS_SPECIES(1).UNC_ABS   = 1e-8;
    Q.ABS_SPECIES(1).CORRLEN   = 10e3;
    Q.ABS_SPECIES(1).LOG_ON    = true;
+   Q.ABS_SPECIES(1).SOURCE    = 'MIPAS';
    %
    Q.ABS_SPECIES(2).TAG{1}    = 'O3-*-575e9-578e9';
    Q.ABS_SPECIES(2).RETRIEVE  = false;
@@ -389,9 +394,10 @@ switch freqmode
    Q.ABS_SPECIES(2).UNC_ABS   = 1e-6;
    Q.ABS_SPECIES(2).CORRLEN   = 10e3;
    Q.ABS_SPECIES(2).LOG_ON    = false;
+   Q.ABS_SPECIES(2).SOURCE    = 'Bdx';
    %
    [Q.ABS_SPECIES.ISOFAC]     = deal( 1 );
-   [Q.ABS_SPECIES.SOURCE]     = deal( 'Bdx' );
+   %[Q.ABS_SPECIES.SOURCE]     = deal( 'Bdx' );
 
  otherwise
   error( 'Frequency band %d is not yet handled.', freqmode );

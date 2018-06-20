@@ -1,3 +1,12 @@
+2018-06-20  Francesco Grieco  <francesco.grieco@chalmers.se>
+
+	* DataPrecalced/SpeciesApriori/*: Added MIPAS/apriori_CO.mat
+
+	* Settings/q_paths.m: Added Q.FOLDER_MIPAS.
+
+	* Settings/q_meso.m: Changed Q.ABS_SPECIES(1).SOURCE to 'MIPAS' 
+	for FMs 14, 22 and 24.
+
 2018-04-25  Patrick Eriksson  <patrick.eriksson@chalmers.se>
 
 	* DataPrecalced/Fgrid: Updated frequency grids. All beside the
