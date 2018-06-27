@@ -1,3 +1,12 @@
+2018-06-27  Francesco Grieco  <francesco.grieco@chalmers.se>
+
+	* DataPrecalced/*: Added folder Backend_PLLdisf containing a new response 
+	function to be applied for inversions for FMs 14, 22 and 24 in the period 
+	when the PLL is not working.
+
+	*Settings/q_paths.m: Added new commented Q.FOLDER_BACKEND. This line is to 
+	be uncommented only for running inversions in the case mentioned above.
+
 2018-06-20  Francesco Grieco  <francesco.grieco@chalmers.se>
 
 	* DataPrecalced/SpeciesApriori/*: Added MIPAS/apriori_CO.mat
