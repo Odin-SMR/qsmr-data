@@ -1,3 +1,7 @@
+2018-09-21  Francesco Grieco <francesco.grieco@chalmers.se>
+
+	* Settings/q_paths.m: Switching back to Backend.
+
 2018-08-30  Francesco Grieco <francesco.grieco@chalmers.se>
 
 	* Settings/q_paths.m: Temporarily changing backend to Backend_PLLdisf for CO inversions.
