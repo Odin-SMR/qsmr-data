@@ -211,7 +211,7 @@ switch freqmode
   Q.ABS_SPECIES(11).RETRIEVE = false;
   %
   [Q.ABS_SPECIES.ISOFAC]     = deal( 1 );
-  [Q.ABS_SPECIES.SOURCE]     = deal( 'Bdx' );
+  [Q.ABS_SPECIES.SOURCE]     = deal( 'WebApi' );
   %-------------------------------------------------------------------------
 
 
@@ -294,7 +294,7 @@ switch freqmode
   Q.ABS_SPECIES(9).TAG{1}    = 'H2O2-*-534e9-554e9';
   Q.ABS_SPECIES(9).RETRIEVE  = false;
   %
-  [Q.ABS_SPECIES.SOURCE]     = deal( 'Bdx' );
+  [Q.ABS_SPECIES.SOURCE]     = deal( 'WebApi' );
   %-------------------------------------------------------------------------
 
 
@@ -388,7 +388,7 @@ switch freqmode
   Q.ABS_SPECIES(10).TAG{1}   = 'H2O2-*-484e9-494e9';
   Q.ABS_SPECIES(10).RETRIEVE = false;
   %
-  [Q.ABS_SPECIES.SOURCE]     = deal( 'Bdx' );
+  [Q.ABS_SPECIES.SOURCE]     = deal( 'WebApi' );
   %-------------------------------------------------------------------------
 
   
@@ -493,7 +493,7 @@ switch freqmode
   Q.ABS_SPECIES(11).TAG{1}   = 'H2O2-*-484e9-494e9';
   Q.ABS_SPECIES(11).RETRIEVE = false;
   %
-  [Q.ABS_SPECIES.SOURCE]     = deal( 'Bdx' );  
+  [Q.ABS_SPECIES.SOURCE]     = deal( 'WebApi' );  
   %-------------------------------------------------------------------------
   
 

@@ -6,12 +6,13 @@
 %
 % FORMAT   q2_precalc_abslookup(QQ,P[,workfolder,precs,do_cubic])
 %        
-% IN    QQ      An array of Q structures
-%       P       A P structure
+% IN    QQ           An array of Q structures
+%       P            A P structure
 % OPT   workfolder   Folder to use for running ARTS. Default is create a
 %                    temporary folder in Q.FOLDER_WORK
 % OPT   precs        Vector of precision limits [K]. Default is 200 mK.
-%       do_cubic Flag to use f_grid assuming cubic interpolation. Default is false.
+%       do_cubic     Flag to use f_grid assuming cubic interpolation. 
+%                    Default is false.
 
 % 2015-05-25   Created by Patrick Eriksson.
 
@@ -30,6 +31,11 @@ if isempty(workfolder)
     clear rm_workfolder
   end  
 end
+
+
+%- Check versions used
+%
+q2_check_versions( QQ );
 
 
 %- Check folder and file names
@@ -124,7 +130,7 @@ function A = do_1fmode( Q, P, workfolder, prec, do_cubic )
   %
   cfile  = q2_artscfile_full( C, workfolder );
   %
-  status = q2_arts( Q, ['-r000 -b ',workfolder,' ',cfile] );
+  status = q2_arts( Q, ['-r000 -b ',fullfile(workfolder,'out'),' ',cfile] );
   A      = xmlLoad( fullfile( workfolder, 'abs_lookup.xml' ) );
   
 return

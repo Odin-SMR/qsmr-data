@@ -1,3 +1,24 @@
+2018-10-03  Patrick Eriksson  <patrick.eriksson@chalmers.se>
+
+	* Build_scripts/runprecalc.m: General revision. Now only paths
+	that actually should be used are included in the stored Q.
+
+	* Settings/q_versions.m (q_versions): New qsmr version.
+
+	* Mscripts_precalc/q2_precalc_abslookup.m (do_1fmode):
+	* Mscripts_precalc/q2_precalc_fgrid.m (f_opt): Changed how 'arts
+	-b' argument set.
+
+	* Mscripts_precalc/q2_precalc_abslookup.m (q2_precalc_abslookup):
+	Added version check.
+
+	* Settings/q_stnd.m (q_stnd):
+	* Settings/q_meso.m (q_meso): ABS_SPECIES.SOURCE now set to
+	WebApi, besides for CO where it is still left as MIPAS.
+
+	* Mscripts_precalc/q2_precalc_abslookup.m: Just polishing of
+	header text.
+
 2018-09-21  Francesco Grieco <francesco.grieco@chalmers.se>
 
 	* Settings/q_paths.m: Switching back to Backend.
@@ -7,7 +28,7 @@
 	* Settings/q_paths.m: Temporarily changing backend to Backend_PLLdisf for CO inversions.
 
 2018-08-22  Francesco Grieco  <francesco.grieco@chalmers.se>
-	
+
 	* Build_scripts/runprecalc.m: Added Q.FOLDER_MIPAS.
 
 2018-06-27  Francesco Grieco  <francesco.grieco@chalmers.se>
