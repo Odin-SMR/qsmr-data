@@ -40,6 +40,9 @@ function runprecalc( out_path, invemode, freqmode )
    Q.FOLDER_ANTENNA     = fullfile( datadir, 'DataPrecalced', 'Antenna' );  
    Q.FOLDER_BACKEND     = fullfile( datadir, 'DataPrecalced', 'Backend' );
 
+
+   Q.FOLDER_MIPAS       = fullfile( datadir, 'DataPrecalced', ...
+                                    'SpeciesApriori', 'MIPAS' );
    
    % Save the Q to be used in the inversion
    save( fullfile( out_path, 'Q.mat' ), 'Q' );
@@ -48,6 +51,7 @@ function runprecalc( out_path, invemode, freqmode )
    Q.FOLDER_MSIS90      = fullfile( datadir, 'DataInput', 'Temperature' );  
    Q.FOLDER_BDX         = fullfile( datadir, 'DataPrecalced', ...
                                     'SpeciesApriori', 'Bdx' );
+
    
    % Calculate absorption table 
    q2_precalc_abslookup( Q, P, '/tmp' );

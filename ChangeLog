@@ -1,3 +1,7 @@
+2018-01-10  Francesco Grieco  <francesco.grieco@chalmers.se>
+
+	* Build_scripts/runprecalc.m: Temporarily re-added Q.FOLDER_MIPAS.
+
 2018-10-03  Patrick Eriksson  <patrick.eriksson@chalmers.se>
 
 	* Build_scripts/runprecalc.m: General revision. Now only paths
