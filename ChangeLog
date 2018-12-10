@@ -1,3 +1,11 @@
+2018-12-10  Patrick Eriksson  <patrick.eriksson@chalmers.se>
+
+	* DataPrecalced/Fgrid/Meso: New grids for fmodes 13 and 19
+	generated.
+
+	* Settings/q_meso.m (q_meso): Adjusted frequency limits for fmode
+	13 and 19.
+
 2018-01-10  Francesco Grieco  <francesco.grieco@chalmers.se>
 
 	* Build_scripts/runprecalc.m: Temporarily re-added Q.FOLDER_MIPAS.

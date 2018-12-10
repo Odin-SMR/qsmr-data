@@ -136,7 +136,7 @@ switch freqmode
   Q.T.L2NAME                 = 'Temperature - 557 (Fmode 13) - 45 to 90 km';
   Q.T.GRID                   = q2_pgrid( 40e3, 130e3, 4 );
   %
-  Q.ABS_SPECIES(1).TAG{1}    = 'H2O-*-556e9-557e9';
+  Q.ABS_SPECIES(1).TAG{1}    = 'H2O-*-556e9-558e9';
   Q.ABS_SPECIES(1).RETRIEVE  = true;
   Q.ABS_SPECIES(1).L2        = true;
   Q.ABS_SPECIES(1).L2NAME    = 'H2O - 557 GHz - 45 to 100 km';
@@ -146,7 +146,7 @@ switch freqmode
   Q.ABS_SPECIES(1).CORRLEN   = 10e3;
   Q.ABS_SPECIES(1).LOG_ON    = true;
   %
-  Q.ABS_SPECIES(2).TAG{1}    = 'O3-*-556e9-557e9';
+  Q.ABS_SPECIES(2).TAG{1}    = 'O3-*-548e9-558e9';
   Q.ABS_SPECIES(2).RETRIEVE  = true;
   Q.ABS_SPECIES(2).L2        = true;
   Q.ABS_SPECIES(2).GRID      = q2_pgrid( 40e3, 130e3, 4 );
@@ -231,7 +231,7 @@ switch freqmode
   Q.T.L2NAME                 = 'Temperature - 557 (Fmode 19) - 45 to 90 km';
   Q.T.GRID                   = q2_pgrid( 40e3, 130e3, 4 );
   %
-  Q.ABS_SPECIES(1).TAG{1}    = 'H2O-*-556e9-557e9';
+  Q.ABS_SPECIES(1).TAG{1}    = 'H2O-*-556e9-558e9';
   Q.ABS_SPECIES(1).RETRIEVE  = true;
   Q.ABS_SPECIES(1).L2        = true;
   Q.ABS_SPECIES(1).L2NAME    = 'H2O - 557 GHz - 45 to 100 km';
@@ -241,7 +241,7 @@ switch freqmode
   Q.ABS_SPECIES(1).CORRLEN   = 10e3;
   Q.ABS_SPECIES(1).LOG_ON    = false;
   %
-  Q.ABS_SPECIES(2).TAG{1}    = 'O3-*-556e9-557e9';
+  Q.ABS_SPECIES(2).TAG{1}    = 'O3-*-548e9-558e9';
   Q.ABS_SPECIES(2).RETRIEVE  = true;
   Q.ABS_SPECIES(2).L2        = true;
   Q.ABS_SPECIES(2).GRID      = q2_pgrid( 40e3, 130e3, 4 );
