@@ -22,10 +22,14 @@ build_data_artifact() {
     echo "Building data artifact for invemode ${invemode} and freqmode ${freqmode}"
 
     # Copy static data needed by qsmr
-    mkdir -p "${output_path}/DataPrecalced"
-    cp -r /QsmrData/DataPrecalced $output_path
-    mkdir -p "${output_path}/DataInput"
-    cp -r /QsmrData/DataInput/Temperature "${output_path}/DataInput"
+    if [ ! -d "${output_path}/DataPrecalced" ]; then
+        mkdir -p "${output_path}/DataPrecalced"
+        cp -r /QsmrData/DataPrecalced $output_path
+    fi
+    if [ ! -d "${output_path}/DataInput" ]; then
+        mkdir -p "${output_path}/DataInput"
+        cp -r /QsmrData/DataInput/Temperature "${output_path}/DataInput"
+    fi
     abslookup_path="${output_path}/AbsLookup/${invemode_dir}"
     mkdir -p $abslookup_path
 
