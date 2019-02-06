@@ -1,3 +1,12 @@
+2019-02-06  Francesco Grieco  <francesco.grieco@chalmers.se>
+
+	* DataPrecalced/SpeciesApriori/*: Removed MIPAS/apriori_CO.mat
+
+        * Settings/q_paths.m: Removed Q.FOLDER_MIPAS.
+
+        * Build_scripts/runprecalc.m: Removed Q.FOLDER_MIPAS.
+
+
 2018-12-10  Patrick Eriksson  <patrick.eriksson@chalmers.se>
 
 	* DataPrecalced/Fgrid/Meso: New grids for fmodes 13 and 19
@@ -6,7 +15,7 @@
 	* Settings/q_meso.m (q_meso): Adjusted frequency limits for fmode
 	13 and 19.
 
-2018-01-10  Francesco Grieco  <francesco.grieco@chalmers.se>
+2018-12-10  Francesco Grieco  <francesco.grieco@chalmers.se>
 
 	* Build_scripts/runprecalc.m: Temporarily re-added Q.FOLDER_MIPAS.
 
