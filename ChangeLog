@@ -1,3 +1,7 @@
+2019-02-17  Francesco Grieco  <francesco.grieco@chalmers.se>
+
+	* Settings/q_paths.m: Temporarily changing Q.FOLDER_BACKEND to 'Backend_PLLdisf'.
+
 2019-02-06  Francesco Grieco  <francesco.grieco@chalmers.se>
 
 	* DataPrecalced/SpeciesApriori/*: Removed MIPAS/apriori_CO.mat
