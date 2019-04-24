@@ -1,3 +1,7 @@
+2019-04-24  Francesco Grieco  <francesco.grieco@chalmers.se>
+
+	* Settings/q_paths.m: Q.FOLDER_BACKEND back to 'Backend'.
+
 2019-04-09  Francesco Grieco  <francesco.grieco@chalmers.se>
 
 	* Settings/q_paths.m: Temporarily changing Q.FOLDER_BACKEND to 'Backend_PLLdisf'.
