@@ -1,3 +1,7 @@
+2019-04-29  Francesco Grieco  <francesco.grieco@chalmers.se>
+
+	* Settings/q_stnd.m: FM2: Q.T.RETRIEVE temporarily changed to false for testing.
+
 2019-04-24  Francesco Grieco  <francesco.grieco@chalmers.se>
 
 	* Settings/q_paths.m: Q.FOLDER_BACKEND back to 'Backend'.
