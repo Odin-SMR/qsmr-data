@@ -79,6 +79,11 @@ ARTS
 BACKEND_NR
    An integer. Index of expected backend. Index coding described in L1B ATBD.
 
+BACKEND_FILE
+   Empty or a string. If empty, the name if file to read is generated
+   automatically following the channel seperation. If you don't want to use
+   these default files, you put the name of the alternative file in this field.
+   
 BASELINE
    A structure. Definition of baseline off-set retrieval. The fields of the
    structure are as follows. RETRIEVE: A boolean, flagging if baseline off-set

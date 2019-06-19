@@ -47,6 +47,8 @@ Q.DZA_GRID_EDGES     = [ Q.DZA_MAX_IN_CORE*[1:3 5 8 12 21] ];
 Q.LO_COMMON          = true;
 Q.LO_ZREF            = 60e3;
 
+Q.BACKEND_FILE       = [];
+
 Q.TB_SCALING_FAC     = 1.0025;
 Q.TB_CONTRAST_FAC    = [];
 
@@ -163,6 +165,7 @@ switch freqmode
  case 14
   %
   Q.BACKEND_NR               = 2;
+  %Q.BACKEND_FILE             = 'backend_df1000kHz_withHan_PLLdisf.xml';
   Q.FRONTEND_NR              = 3;
   Q.F_LO_NOMINAL             = 572.762e9;
   Q.LO_COMMON                = false;

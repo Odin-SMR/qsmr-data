@@ -47,6 +47,8 @@ Q.DZA_GRID_EDGES     = [ Q.DZA_MAX_IN_CORE*[1:3 5 8 12 21] ];
 Q.LO_COMMON          = true;
 Q.LO_ZREF            = 60e3;
 
+Q.BACKEND_FILE       = [];
+
 Q.TB_SCALING_FAC     = 1.0025;
 Q.TB_CONTRAST_FAC    = [];
 

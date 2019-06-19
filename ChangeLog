@@ -1,3 +1,12 @@
+2019-06-19  Patrick Eriksson  <patrick.eriksson@chalmers.se>
+
+	* Settings/q_stnd.m (q_stnd):
+	* Settings/q_meso.m (q_meso): Q.BACKEND_FILE set to be empty in
+	both files. Example of using Q.BACKEND_FILE is found in q_meso for
+	fmode 14, but is commented out.
+
+	* Settings/q_fields.rst: Added description of Q.BACKEND_FILE. 
+
 2019-06-19  Francesco Grieco  <francesco.grieco@chalmers.se>
 
 	* DataPrecalced/*: Deleted folder 'Backend_PLLdisf'.
