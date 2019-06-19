@@ -1,3 +1,12 @@
+2019-06-19  Francesco Grieco  <francesco.grieco@chalmers.se>
+
+	* DataPrecalced/*: Deleted folder 'Backend_PLLdisf'.
+
+	* DataPrecalced/Backend/*: Added file 'backend_df1000kHz_withHan_PLLdisf.xml' 
+	in substitution to the one in folder 'Backend_PLLdisf'.
+
+	* Settings/q_paths.m: Deleted line referring to 'Backend_PLLdisf' directory.
+
 2019-04-29  Francesco Grieco  <francesco.grieco@chalmers.se>
 
 	* Settings/q_stnd.m: FM2: Q.T.RETRIEVE temporarily changed to false for testing.
