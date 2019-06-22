@@ -165,7 +165,7 @@ switch freqmode
  case 14
   %
   Q.BACKEND_NR               = 2;
-  %Q.BACKEND_FILE             = 'backend_df1000kHz_withHan_PLLdisf.xml';
+  Q.BACKEND_FILE             = 'backend_df1000kHz_withHan_PLLdisf.xml';
   Q.FRONTEND_NR              = 3;
   Q.F_LO_NOMINAL             = 572.762e9;
   Q.LO_COMMON                = false;
@@ -305,6 +305,7 @@ switch freqmode
  case 22
   %
   Q.BACKEND_NR               = 2;
+  Q.BACKEND_FILE             = 'backend_df1000kHz_withHan_PLLdisf.xml';
   Q.FRONTEND_NR              = 3;
   Q.F_LO_NOMINAL             = 572.964e9;
   Q.LO_COMMON                = false;
@@ -354,6 +355,7 @@ switch freqmode
   case 24
    %
    Q.BACKEND_NR               = 1;
+   Q.BACKEND_FILE             = 'backend_df1000kHz_withHan_PLLdisf.xml';
    Q.FRONTEND_NR              = 3;
    Q.F_LO_NOMINAL             = 572.762e9;
    Q.LO_COMMON                = false;

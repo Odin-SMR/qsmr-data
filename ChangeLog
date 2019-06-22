@@ -1,3 +1,8 @@
+2019-06-22  Francesco Grieco  <francesco.grieco@chalmers.se>
+
+	* Settings/q_meso.m: Q.BACKEND_FILE set to 'backend_df1000kHz_withHan_PLLdisf.xml'
+	for FMs 14, 22 and 24.
+
 2019-06-19  Patrick Eriksson  <patrick.eriksson@chalmers.se>
 
 	* Settings/q_stnd.m (q_stnd):
