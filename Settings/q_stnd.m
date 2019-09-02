@@ -232,7 +232,7 @@ switch freqmode
   Q.ZTAN_MIN_RANGE           = [ 25e3 40e3 ];
   %
   Q.T.L2                     = true;
-  Q.T.RETRIEVE               = false;
+  Q.T.RETRIEVE               = true;
   Q.T.L2NAME                 = 'Temperature / 545 GHz / 15 to 65 km';
   Q.T.GRID                   = q2_pgrid( 10e3, 100e3, 4 );
   %

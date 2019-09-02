@@ -1,3 +1,7 @@
+2019-09-01  Bengt Rydberg <bengt.rydberg2molflow.com>
+
+        * Settings/q_stnd.m: FM2: Q.T.RETRIEVE changed back to true.
+
 2019-06-22  Francesco Grieco  <francesco.grieco@chalmers.se>
 
 	* Settings/q_meso.m: Q.BACKEND_FILE set to 'backend_df1000kHz_withHan_PLLdisf.xml'
