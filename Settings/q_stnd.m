@@ -234,7 +234,7 @@ switch freqmode
   Q.T.L2                     = true;
   Q.T.RETRIEVE               = true;
   Q.T.L2NAME                 = 'Temperature / 545 GHz / 15 to 65 km';
-  Q.T.GRID                   = q2_pgrid( 10e3, 100e3, 4 );
+  Q.T.GRID                   = q2_pgrid( 10e3, 100e3, 8 );
   %
   Q.ABS_SPECIES(1).TAG{1}    = 'O3-666-534e9-556e9';
   Q.ABS_SPECIES(1).RETRIEVE  = true;

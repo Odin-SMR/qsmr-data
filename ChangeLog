@@ -1,4 +1,9 @@
-2019-09-01  Bengt Rydberg <bengt.rydberg2molflow.com>
+2019-11-29  Bengt Rydberg <bengt.rydberg@molflow.com>
+
+        * Settings/q_stnd.m: FM2: Q.T.GRID increased resolution according
+        to instruction from Donal.
+
+2019-09-01  Bengt Rydberg <bengt.rydberg@molflow.com>
 
         * Settings/q_stnd.m: FM2: Q.T.RETRIEVE changed back to true.
 
