@@ -137,6 +137,7 @@ switch freqmode
   Q.T.L2                     = true;
   Q.T.L2NAME                 = 'Temperature - 557 (Fmode 13) - 45 to 90 km';
   Q.T.GRID                   = q2_pgrid( 40e3, 130e3, 4 );
+  Q.T.UNC              	     = [ 3 3 5 5 5 ];
   %
   Q.ABS_SPECIES(1).TAG{1}    = 'H2O-*-556e9-558e9';
   Q.ABS_SPECIES(1).RETRIEVE  = true;
@@ -233,6 +234,7 @@ switch freqmode
   Q.T.L2                     = true;
   Q.T.L2NAME                 = 'Temperature - 557 (Fmode 19) - 45 to 90 km';
   Q.T.GRID                   = q2_pgrid( 40e3, 130e3, 4 );
+  Q.T.UNC              	     = [ 3 3 5 5 5 ];
   %
   Q.ABS_SPECIES(1).TAG{1}    = 'H2O-*-556e9-558e9';
   Q.ABS_SPECIES(1).RETRIEVE  = true;
